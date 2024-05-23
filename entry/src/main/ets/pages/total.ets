@@ -1,3 +1,5 @@
+import router from '@ohos.router'
+
 @Entry
 @Component
 struct total{
@@ -128,6 +130,9 @@ struct total{
           Image($rawfile('X.svg'))
             .height(20)
             .fillColor(Color.White)
+            .onClick(()=>{
+              router.back()
+            })
 
         }
         .backgroundColor(Color.Black)

@@ -1,3 +1,5 @@
+import router from '@ohos.router'
+
 @Entry
 @Component
 struct Index {
@@ -153,6 +155,11 @@ struct Index {
             pressed:{
               .opacity(0.6)
             }
+          })
+          .onClick(()=>{
+            router.pushUrl({
+              url:"pages/total"
+            })
           })
       }
       .width('100%')
