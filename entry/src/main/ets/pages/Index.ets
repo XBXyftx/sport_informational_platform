@@ -116,6 +116,11 @@ struct Index {
               .width(60)
 
             TextInput({placeholder:'请输入验证码'})
+              .type(InputType.Number)
+              .onChange((verification_code:string)=>{
+                this.verification_code = 0
+                this.verification_code = parseInt(verification_code)
+              })
           }
           .flexGrow(1)
           .width('100%')
