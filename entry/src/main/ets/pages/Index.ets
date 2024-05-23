@@ -62,11 +62,13 @@ struct Index {
           .margin({top:80})
           .borderRadius(50)
 
+
         Text('北京信息科技大学体育信息化平台')
           .fontColor(Color.Black)
           .fontWeight(600)
           .fontSize(20)
           .margin({top:15})
+
 
         Flex({direction: FlexDirection.Column}){
           //输入区域组件
@@ -102,7 +104,7 @@ struct Index {
           .margin({left:10,right:5})
 
         }
-        .margin({top:40})
+        .margin({top:50})
         .backgroundColor('#ffc1bebe')
         .width(330)
         .height(150)
