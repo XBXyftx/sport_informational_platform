@@ -14,6 +14,7 @@ struct Index {
 
         Text('北京信息科技大学体育信息化平台')
           .fontColor(Color.White)
+          .fontWeight(600)
 
         Image($rawfile('more_sport.svg'))
           .width(30)
@@ -26,7 +27,7 @@ struct Index {
 
       Image($rawfile('bxk.jpg'))
         .width(100)
-        .margin({top:200})
+        .margin({top:80})
     }
     .width('100%')
     .height('100%')
