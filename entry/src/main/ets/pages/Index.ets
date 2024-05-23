@@ -63,10 +63,50 @@ struct Index {
           .borderRadius(50)
 
         Text('北京信息科技大学体育信息化平台')
-          .fontColor(Color.White)
+          .fontColor(Color.Black)
           .fontWeight(600)
           .fontSize(20)
           .margin({top:15})
+
+        Flex({direction: FlexDirection.Column}){
+          //输入区域组件
+          Row(){
+            //账号行
+            Text('账号')
+              .width(60)
+          }
+          .flexGrow(1)
+          .width('100%')
+          .margin({left:10,right:5})
+
+          Divider()
+
+          Row(){
+            //密码行
+            Text('密码')
+              .width(60)
+          }
+          .flexGrow(1)
+          .width('100%')
+          .margin({left:10,right:5})
+
+          Divider()
+
+          Row(){
+            //验证码行
+            Text('验证码')
+              .width(60)
+          }
+          .flexGrow(1)
+          .width('100%')
+          .margin({left:10,right:5})
+
+        }
+        .margin({top:40})
+        .backgroundColor('#ffc1bebe')
+        .width(330)
+        .height(150)
+        .opacity(0.5)
       }
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
