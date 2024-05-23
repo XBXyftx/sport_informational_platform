@@ -33,8 +33,9 @@ struct total{
     }.width('100%')
     .backgroundColor('#ffd7e9fc')
     .height(70)
-
   }
+
+
 
   @Builder Order (index: number) {
     //订单
@@ -59,9 +60,60 @@ struct total{
     }.width('100%')
     .backgroundColor('#ffd7e9fc')
     .height(70)
-
   }
 
+
+
+  @Builder Repairs (index: number) {
+    //报修
+    Column() {
+      Image($rawfile('repairs.svg'))
+        .width(30)
+        .margin({top:5})
+        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue  )
+      Text('报修')
+        .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
+          //文字颜色根据是否被选择判别器currentIndex来决定
+        .fontSize(16)
+        .fontWeight(this.currentIndex === index ? 500 : 400)
+          //选中后文字稍微变粗
+        .lineHeight(22)
+        .margin({ top:0})
+      Divider()
+        .strokeWidth(2)
+        .color('#007DFF')
+        .opacity(this.currentIndex === index ? 1 : 0)
+      //分割线透明度根据是否被选择判别器currentIndex来决定
+    }.width('100%')
+    .backgroundColor('#ffd7e9fc')
+    .height(70)
+  }
+
+
+  @Builder My (index: number) {
+    //我的
+    Column() {
+      Image($rawfile('My.svg'))
+        .width(30)
+        .margin({top:5})
+        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue  )
+      Text('我的')
+        .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
+          //文字颜色根据是否被选择判别器currentIndex来决定
+        .fontSize(16)
+        .fontWeight(this.currentIndex === index ? 500 : 400)
+          //选中后文字稍微变粗
+        .lineHeight(22)
+        .margin({ top:0})
+      Divider()
+        .strokeWidth(2)
+        .color('#007DFF')
+        .opacity(this.currentIndex === index ? 1 : 0)
+      //分割线透明度根据是否被选择判别器currentIndex来决定
+    }.width('100%')
+    .backgroundColor('#ffd7e9fc')
+    .height(70)
+  }
 
 
 
@@ -121,12 +173,24 @@ struct total{
       Tabs({ barPosition: BarPosition.End, controller: this.controller }){
         //底部标签栏
         TabContent(){
+          //首页
           Column(){}
         }.tabBar(this.TabBuilder_First_Page(0))
 
         TabContent(){
+          //订单
           Column(){}
         }.tabBar(this.Order(1))
+
+        TabContent(){
+          //订单
+          Column(){}
+        }.tabBar(this.Repairs(2))
+
+        TabContent(){
+          //我的
+          Column(){}
+        }.tabBar(this.My(3))
       }
       .width('100%')
       .flexGrow(1)
