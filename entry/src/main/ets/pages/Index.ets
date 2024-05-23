@@ -80,6 +80,11 @@ struct Index {
               .width(60)
 
             TextInput({placeholder:'请输入账号'})
+              .type(InputType.Number)
+              .onChange((account:string)=>{
+                this.account = 0
+                this.account = parseInt(account)
+              })
           }
           .flexGrow(1)
           .width('100%')
@@ -93,6 +98,11 @@ struct Index {
               .width(60)
 
             TextInput({placeholder:'请输入密码'})
+              .type(InputType.Number)
+              .onChange((password:string)=>{
+                this.password = 0
+                this.password = parseInt(password)
+              })
           }
           .flexGrow(1)
           .width('100%')
@@ -117,14 +127,15 @@ struct Index {
         .width(330)
         .height(150)
         .opacity(0.5)
+        .shadow({radius:90})
 
         Button('忘记密码')
           .fontColor(Color.White)
-          .width(75)
+          .width(90)
           .height(20)
-          .fontSize(10)
-          .fontWeight(300)
-          .margin({top:5,left:40})
+          .fontSize(12)
+          .fontWeight(500)
+          .margin({top:15,left:40})
           .backgroundColor('#45292828')
           .alignSelf(ItemAlign.Start)
 
