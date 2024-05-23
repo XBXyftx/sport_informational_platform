@@ -109,6 +109,16 @@ struct Index {
         .width(330)
         .height(150)
         .opacity(0.5)
+
+        Button('忘记密码')
+          .fontColor(Color.White)
+          .width(75)
+          .height(20)
+          .fontSize(10)
+          .fontWeight(300)
+          .margin({top:5,left:40})
+          .backgroundColor('#45292828')
+          .alignSelf(ItemAlign.Start)
       }
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
