@@ -6,7 +6,7 @@ struct Index {
   @State verification_code : Number = 0
 
   build() {
-    Flex({ direction: FlexDirection.Column }){
+    Column(){
       //根组件
       Row(){
         //置顶栏
@@ -50,7 +50,7 @@ struct Index {
         })
 
       }
-      .flexGrow(1)
+      .height(60)
       .width('100%')
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
@@ -158,7 +158,7 @@ struct Index {
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
       .backgroundImageSize(ImageSize.Cover)
-      .flexGrow(10)
+      .flexGrow(1)
 
     }
     .width('100%')
