@@ -11,10 +11,12 @@ struct total{
 
 
   @Builder TabBuilder_First_Page(index: number) {
+    //首页
     Column() {
       Image($rawfile('Firstpage.svg'))
         .width(30)
         .margin({top:5})
+        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue)
       Text('首页')
         .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
         //文字颜色根据是否被选择判别器currentIndex来决定
@@ -30,7 +32,33 @@ struct total{
         //分割线透明度根据是否被选择判别器currentIndex来决定
     }.width('100%')
     .backgroundColor('#ffd7e9fc')
-    .height(60)
+    .height(70)
+
+  }
+
+  @Builder Order (index: number) {
+    //订单
+    Column() {
+      Image($rawfile('Order.svg'))
+        .width(30)
+        .margin({top:5})
+        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue  )
+      Text('订单')
+        .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
+          //文字颜色根据是否被选择判别器currentIndex来决定
+        .fontSize(16)
+        .fontWeight(this.currentIndex === index ? 500 : 400)
+          //选中后文字稍微变粗
+        .lineHeight(22)
+        .margin({ top:0})
+      Divider()
+        .strokeWidth(2)
+        .color('#007DFF')
+        .opacity(this.currentIndex === index ? 1 : 0)
+      //分割线透明度根据是否被选择判别器currentIndex来决定
+    }.width('100%')
+    .backgroundColor('#ffd7e9fc')
+    .height(70)
 
   }
 
@@ -94,15 +122,19 @@ struct total{
         //底部标签栏
         TabContent(){
           Column(){}
-        }.tabBar(this.TabBuilder_First_Page(1))
+        }.tabBar(this.TabBuilder_First_Page(0))
+
+        TabContent(){
+          Column(){}
+        }.tabBar(this.Order(1))
       }
       .width('100%')
       .flexGrow(1)
       .vertical(false)
       .scrollable(true)
       .barWidth('100%')
-      .barHeight(60)
-      .animationDuration(400)
+      .barHeight(70)
+      .animationDuration(200)
       .onChange((index: number) => {
         this.currentIndex = index
       })
