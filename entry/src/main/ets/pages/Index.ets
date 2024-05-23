@@ -10,7 +10,7 @@ struct Index {
         //置顶栏
         Image($rawfile('X.svg'))
           .height(20)
-          .margin({left:12})
+          .margin({left:12,right:25})
 
         Text('北京信息科技大学体育信息化平台')
           .fontColor(Color.White)
