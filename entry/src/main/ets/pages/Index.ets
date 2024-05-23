@@ -1,7 +1,9 @@
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
+  @State account : Number = 0
+  @State password : Number = 0
+  @State verification_code : Number = 0
 
   build() {
     Flex({ direction: FlexDirection.Column }){
@@ -76,6 +78,8 @@ struct Index {
             //账号行
             Text('账号')
               .width(60)
+
+            TextInput({placeholder:'请输入账号'})
           }
           .flexGrow(1)
           .width('100%')
@@ -87,6 +91,8 @@ struct Index {
             //密码行
             Text('密码')
               .width(60)
+
+            TextInput({placeholder:'请输入密码'})
           }
           .flexGrow(1)
           .width('100%')
@@ -98,6 +104,8 @@ struct Index {
             //验证码行
             Text('验证码')
               .width(60)
+
+            TextInput({placeholder:'请输入验证码'})
           }
           .flexGrow(1)
           .width('100%')
@@ -119,11 +127,22 @@ struct Index {
           .margin({top:5,left:40})
           .backgroundColor('#45292828')
           .alignSelf(ItemAlign.Start)
+
+        Button('登录')
+          .margin({top:70})
+          .fontSize(18)
+          .width(300)
+          .opacity(0.9)
+          .stateStyles({
+            pressed:{
+              .opacity(0.6)
+            }
+          })
       }
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
       .backgroundImageSize(ImageSize.Cover)
-      .flexGrow(20)
+      .flexGrow(10)
 
     }
     .width('100%')
