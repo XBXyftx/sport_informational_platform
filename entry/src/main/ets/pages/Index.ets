@@ -132,7 +132,7 @@ struct Index {
         .width(330)
         .height(150)
         .opacity(0.5)
-        .shadow({radius:90})
+        .shadow({radius:100,color:Color.Black})
 
         Button('忘记密码')
           .fontColor(Color.White)
