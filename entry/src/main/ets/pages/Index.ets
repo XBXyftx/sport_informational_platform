@@ -34,8 +34,8 @@ struct Index {
       }
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
-      .backgroundImageSize({width:'100%'})
-      .flexGrow(14)
+      .backgroundImageSize(ImageSize.Cover)
+      .flexGrow(20)
 
     }
     .width('100%')
