@@ -32,6 +32,7 @@ struct Index {
           .fontWeight(600)
 
         Column(){
+          //右上角更多组件
           Image($rawfile('more_sport.svg'))
             .width(30)
         }
@@ -52,6 +53,8 @@ struct Index {
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
 
+
+
       Column(){
         //下半区最外层组件
         Image($rawfile('bxk.jpg'))
@@ -62,6 +65,8 @@ struct Index {
         Text('北京信息科技大学体育信息化平台')
           .fontColor(Color.White)
           .fontWeight(600)
+          .fontSize(20)
+          .margin({top:15})
       }
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
