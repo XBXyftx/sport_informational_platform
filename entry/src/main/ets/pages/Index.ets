@@ -4,7 +4,7 @@ import router from '@ohos.router'
 @Component
 struct Index {
   @State account : Number = 0
-  @State password : Number = 0
+  @State password : string = ''
   @State verification_code : Number = 0
 
   build() {
@@ -100,10 +100,9 @@ struct Index {
               .width(60)
 
             TextInput({placeholder:'请输入密码'})
-              .type(InputType.Number)
+              .type(InputType.Password)
               .onChange((password:string)=>{
-                this.password = 0
-                this.password = parseInt(password)
+                this.password = password
               })
           }
           .flexGrow(1)
@@ -116,6 +115,9 @@ struct Index {
             //验证码行
             Text('验证码')
               .width(60)
+
+            Image($rawfile('ma.jpg'))
+              .height(30)
 
             TextInput({placeholder:'请输入验证码'})
               .type(InputType.Number)
@@ -133,7 +135,7 @@ struct Index {
         .backgroundColor('#ffc1bebe')
         .width(330)
         .height(150)
-        .opacity(0.5)
+        .opacity(0.7)
         .shadow({radius:100,color:Color.Black})
 
         Button('忘记密码')
