@@ -23,7 +23,7 @@ struct Index {
         })
         .height(30)
         .width(30)
-        .margin({left:12,right:3})
+        .margin({left:12,right:10})
         .justifyContent(FlexAlign.Center)
 
 
@@ -31,9 +31,21 @@ struct Index {
           .fontColor(Color.White)
           .fontWeight(600)
 
-        Image($rawfile('more_sport.svg'))
-          .width(30)
-          .margin({right:10})
+        Column(){
+          Image($rawfile('more_sport.svg'))
+            .width(30)
+        }
+        .height(30)
+        .width(30)
+        .margin({right:10})
+        .justifyContent(FlexAlign.Center)
+        .backgroundColor(Color.Black)
+        .stateStyles({
+          pressed:{
+            .backgroundColor(Color.Gray)
+          }
+        })
+
       }
       .flexGrow(1)
       .width('100%')
