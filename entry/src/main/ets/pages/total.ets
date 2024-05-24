@@ -283,21 +283,27 @@ struct total{
 
         TabContent(){
           //订单
-          Column(){}
+          Column(){
+            //订单页根组件
+          }
         }.tabBar(this.TabBuilder(1,$rawfile('Order.svg'),'订单'))
 
 
 
         TabContent(){
           //报修
-          Column(){}
+          Column(){
+            //报修页根组件
+          }
         }.tabBar(this.TabBuilder(2,$rawfile('repairs.svg'),'报修'))
 
 
 
         TabContent(){
           //我的
-          Column(){}
+          Column(){
+            //我的页根组件
+          }
         }.tabBar(this.TabBuilder(3,$rawfile('My.svg'),'我的'))
 
 
