@@ -95,7 +95,7 @@ struct total{
 
 
       Tabs({ barPosition: BarPosition.End, controller: this.controller }){
-        //底部标签栏
+        //下半部分
         TabContent(){
           //首页
           Column(){
