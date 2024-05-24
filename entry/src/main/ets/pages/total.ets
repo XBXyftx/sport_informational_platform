@@ -102,6 +102,7 @@ struct total{
           //首页
           Column(){
             //首页tabContent根组件
+
           }
         }.tabBar(this.TabBuilder(0,$rawfile('Firstpage.svg'),'首页'))
 
