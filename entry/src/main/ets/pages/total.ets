@@ -7,9 +7,7 @@ struct total{
   @State selectedFontColor: string = '#007DFF'//被选中时的文字颜色
   @State currentIndex: number = 0//是否被选中的判别器
   private controller: TabsController = new TabsController()
-
-
-
+  scroller: Scroller = new Scroller()
 
 
   @Builder TabBuilder(index: number,picture:Resource,name:string) {
@@ -102,8 +100,32 @@ struct total{
           //首页
           Column(){
             //首页tabContent根组件
+            Image($rawfile('Total_Sport_Picture.png'))
+              .width('100%')
 
+            Scroll(this.scroller){
+              //下方功能按钮块的滚动组件
+
+              Column(){
+                Text('体育教学管理')
+                  .fontSize(26)
+                  .fontWeight(310)
+              }
+              .width(180)
+              .height(90)
+              .borderRadius(20)
+              .justifyContent(FlexAlign.Center)
+              .radialGradient({
+                colors:[['#f8ffffff',0],['#48999999',1]],
+                radius:150,
+                center:[70,30]
+              })
+            }
+            .flexGrow(1)
+            .width('100%')
           }
+          .width('100%')
+          .height('100%')
         }.tabBar(this.TabBuilder(0,$rawfile('Firstpage.svg'),'首页'))
 
         TabContent(){
