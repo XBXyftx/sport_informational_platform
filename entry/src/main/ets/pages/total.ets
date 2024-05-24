@@ -107,31 +107,173 @@ struct total{
 
             Scroll(this.scroller){
                 //下方功能按钮块的滚动组件
-              Row(){
+              Row({space:10}){
                   //横向排布的两列
-                Column(){
-                  Text('体育教学管理')
-                    .fontSize(26)
-                    .fontWeight(310)
+
+
+                Column({space:20}){
+                  //左侧列
+
+
+                  Column(){
+                    Text('体育教学管理')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+                  Column(){
+                    Text('学生体质测试')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+                  Column(){
+                    Text('群体活动管理')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+                  Column(){
+                    Text('体育志愿者管理')
+                      .fontSize(24)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+
                 }
                 .width(180)
-                .height(90)
-                .borderRadius(20)
-                .justifyContent(FlexAlign.Center)
-                .radialGradient({
-                  colors:[['#f8ffffff',0],['#48999999',1]],
-                  radius:150,
-                  center:[70,30]
-                })
+
+
+                Column({space:20}){
+                  //右侧列
+
+
+                  Column(){
+                    Text('教改科研管理')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+                  Column(){
+                    Text('运动训练管理')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+                  Column(){
+                    Text('运动场馆管理')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+                  Column(){
+                    Text('第二课堂系统')
+                      .fontSize(26)
+                      .fontWeight(600)
+                      .fontColor(Color.White)
+                  }
+                  .width(180)
+                  .height(110)
+                  .borderRadius(20)
+                  .justifyContent(FlexAlign.Center)
+                  .linearGradient({
+                    colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
+                    direction:GradientDirection.LeftBottom
+                  })
+
+
+
+                }
+                .width(180)
+
+
+
               }
               .width('100%')
-              .height('100%')
+              .justifyContent(FlexAlign.SpaceBetween)
+              .alignItems(VerticalAlign.Top)
+              .padding({top:30,left:20,right:20})
 
 
 
             }
-            .flexGrow(1)
+            .height(490)
             .width('100%')
+            .scrollable(ScrollDirection.Vertical)
+            .linearGradient({
+              direction:GradientDirection.RightBottom,
+              colors:[['#c498f4e8',0],['#f31c6bd7',1]]
+            })
           }
           .width('100%')
           .height('100%')
