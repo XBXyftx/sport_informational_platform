@@ -279,20 +279,28 @@ struct total{
           .height('100%')
         }.tabBar(this.TabBuilder(0,$rawfile('Firstpage.svg'),'首页'))
 
+
+
         TabContent(){
           //订单
           Column(){}
         }.tabBar(this.TabBuilder(1,$rawfile('Order.svg'),'订单'))
+
+
 
         TabContent(){
           //报修
           Column(){}
         }.tabBar(this.TabBuilder(2,$rawfile('repairs.svg'),'报修'))
 
+
+
         TabContent(){
           //我的
           Column(){}
         }.tabBar(this.TabBuilder(3,$rawfile('My.svg'),'我的'))
+
+
       }
       .width('100%')
       .flexGrow(1)
