@@ -102,11 +102,13 @@ struct total{
             //首页tabContent根组件
             Image($rawfile('Total_Sport_Picture.png'))
               .width('100%')
-            Row(){
-              //横向排布的两列
-              Scroll(this.scroller){
-                //下方功能按钮块的滚动组件
 
+
+
+            Scroll(this.scroller){
+                //下方功能按钮块的滚动组件
+              Row(){
+                  //横向排布的两列
                 Column(){
                   Text('体育教学管理')
                     .fontSize(26)
@@ -121,7 +123,11 @@ struct total{
                   radius:150,
                   center:[70,30]
                 })
-            }
+              }
+              .width('100%')
+              .height('100%')
+
+
 
             }
             .flexGrow(1)
