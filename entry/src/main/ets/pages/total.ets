@@ -102,24 +102,27 @@ struct total{
             //首页tabContent根组件
             Image($rawfile('Total_Sport_Picture.png'))
               .width('100%')
+            Row(){
+              //横向排布的两列
+              Scroll(this.scroller){
+                //下方功能按钮块的滚动组件
 
-            Scroll(this.scroller){
-              //下方功能按钮块的滚动组件
+                Column(){
+                  Text('体育教学管理')
+                    .fontSize(26)
+                    .fontWeight(310)
+                }
+                .width(180)
+                .height(90)
+                .borderRadius(20)
+                .justifyContent(FlexAlign.Center)
+                .radialGradient({
+                  colors:[['#f8ffffff',0],['#48999999',1]],
+                  radius:150,
+                  center:[70,30]
+                })
+            }
 
-              Column(){
-                Text('体育教学管理')
-                  .fontSize(26)
-                  .fontWeight(310)
-              }
-              .width(180)
-              .height(90)
-              .borderRadius(20)
-              .justifyContent(FlexAlign.Center)
-              .radialGradient({
-                colors:[['#f8ffffff',0],['#48999999',1]],
-                radius:150,
-                center:[70,30]
-              })
             }
             .flexGrow(1)
             .width('100%')
