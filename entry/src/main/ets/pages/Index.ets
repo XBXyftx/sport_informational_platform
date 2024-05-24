@@ -135,7 +135,7 @@ struct Index {
         .backgroundColor('#ffc1bebe')
         .width(330)
         .height(150)
-        .opacity(0.7)
+        .opacity(0.5)
         .shadow({radius:100,color:Color.Black})
 
         Button('忘记密码')
