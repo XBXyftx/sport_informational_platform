@@ -129,6 +129,11 @@ struct total{
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
                   })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
+                  })
 
 
                   Column(){
@@ -144,6 +149,11 @@ struct total{
                   .linearGradient({
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
+                  })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
                   })
 
 
@@ -161,6 +171,11 @@ struct total{
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
                   })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
+                  })
 
 
                   Column(){
@@ -176,6 +191,11 @@ struct total{
                   .linearGradient({
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
+                  })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
                   })
 
 
@@ -202,6 +222,11 @@ struct total{
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
                   })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
+                  })
 
 
                   Column(){
@@ -217,6 +242,11 @@ struct total{
                   .linearGradient({
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
+                  })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
                   })
 
 
@@ -234,6 +264,11 @@ struct total{
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
                   })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
+                  })
 
 
                   Column(){
@@ -250,6 +285,11 @@ struct total{
                     colors:[['#ff98f4e8',0],['#ff0a34f0',1]],
                     direction:GradientDirection.LeftBottom
                   })
+                  .shadow({
+                    radius:30,
+                    offsetX:10,
+                    offsetY:10
+                  })
 
 
 
@@ -262,7 +302,7 @@ struct total{
               .width('100%')
               .justifyContent(FlexAlign.SpaceBetween)
               .alignItems(VerticalAlign.Top)
-              .padding({top:30,left:20,right:20})
+              .padding({top:30,left:15,right:15})
 
 
 
