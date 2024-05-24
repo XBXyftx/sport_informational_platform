@@ -12,14 +12,14 @@ struct total{
 
 
 
-  @Builder TabBuilder_First_Page(index: number) {
-    //首页
+  @Builder TabBuilder(index: number,picture:Resource,name:string) {
+    //通用TabBuilder
     Column() {
-      Image($rawfile('Firstpage.svg'))
+      Image(picture)
         .width(30)
         .margin({top:5})
         .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue)
-      Text('首页')
+      Text(name)
         .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
         //文字颜色根据是否被选择判别器currentIndex来决定
         .fontSize(16)
@@ -37,85 +37,6 @@ struct total{
     .height(70)
   }
 
-
-
-  @Builder Order (index: number) {
-    //订单
-    Column() {
-      Image($rawfile('Order.svg'))
-        .width(30)
-        .margin({top:5})
-        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue  )
-      Text('订单')
-        .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
-          //文字颜色根据是否被选择判别器currentIndex来决定
-        .fontSize(16)
-        .fontWeight(this.currentIndex === index ? 500 : 400)
-          //选中后文字稍微变粗
-        .lineHeight(22)
-        .margin({ top:0})
-      Divider()
-        .strokeWidth(2)
-        .color('#007DFF')
-        .opacity(this.currentIndex === index ? 1 : 0)
-      //分割线透明度根据是否被选择判别器currentIndex来决定
-    }.width('100%')
-    .backgroundColor('#ffd7e9fc')
-    .height(70)
-  }
-
-
-
-  @Builder Repairs (index: number) {
-    //报修
-    Column() {
-      Image($rawfile('repairs.svg'))
-        .width(30)
-        .margin({top:5})
-        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue  )
-      Text('报修')
-        .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
-          //文字颜色根据是否被选择判别器currentIndex来决定
-        .fontSize(16)
-        .fontWeight(this.currentIndex === index ? 500 : 400)
-          //选中后文字稍微变粗
-        .lineHeight(22)
-        .margin({ top:0})
-      Divider()
-        .strokeWidth(2)
-        .color('#007DFF')
-        .opacity(this.currentIndex === index ? 1 : 0)
-      //分割线透明度根据是否被选择判别器currentIndex来决定
-    }.width('100%')
-    .backgroundColor('#ffd7e9fc')
-    .height(70)
-  }
-
-
-  @Builder My (index: number) {
-    //我的
-    Column() {
-      Image($rawfile('My.svg'))
-        .width(30)
-        .margin({top:5})
-        .fillColor(this.currentIndex === index ? '#fff42aaa' : Color.Blue  )
-      Text('我的')
-        .fontColor(this.currentIndex === index ? this.selectedFontColor : this.fontColor)
-          //文字颜色根据是否被选择判别器currentIndex来决定
-        .fontSize(16)
-        .fontWeight(this.currentIndex === index ? 500 : 400)
-          //选中后文字稍微变粗
-        .lineHeight(22)
-        .margin({ top:0})
-      Divider()
-        .strokeWidth(2)
-        .color('#007DFF')
-        .opacity(this.currentIndex === index ? 1 : 0)
-      //分割线透明度根据是否被选择判别器currentIndex来决定
-    }.width('100%')
-    .backgroundColor('#ffd7e9fc')
-    .height(70)
-  }
 
 
 
@@ -179,23 +100,25 @@ struct total{
         //底部标签栏
         TabContent(){
           //首页
-          Column(){}
-        }.tabBar(this.TabBuilder_First_Page(0))
+          Column(){
+            //首页tabContent根组件
+          }
+        }.tabBar(this.TabBuilder(0,$rawfile('Firstpage.svg'),'首页'))
 
         TabContent(){
           //订单
           Column(){}
-        }.tabBar(this.Order(1))
+        }.tabBar(this.TabBuilder(1,$rawfile('Order.svg'),'订单'))
 
         TabContent(){
-          //订单
+          //报修
           Column(){}
-        }.tabBar(this.Repairs(2))
+        }.tabBar(this.TabBuilder(2,$rawfile('repairs.svg'),'报修'))
 
         TabContent(){
           //我的
           Column(){}
-        }.tabBar(this.My(3))
+        }.tabBar(this.TabBuilder(3,$rawfile('My.svg'),'我的'))
       }
       .width('100%')
       .flexGrow(1)
