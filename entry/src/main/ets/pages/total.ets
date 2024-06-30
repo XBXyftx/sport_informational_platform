@@ -325,7 +325,35 @@ struct total{
           //订单
           Column(){
             //订单页根组件
+            Text('您的订单')
+              .width('100%')
+              .textAlign(TextAlign.Center)
+              .margin({top:20,bottom:20})
+              .fontSize(35)
+              .fontWeight(700)
+
+            Scroll(this.scroller){
+
+              //订单单元格
+              Column(){
+
+              }
+              .width('90%')
+              .height(30)
+              .backgroundColor(Color.White)
+              .borderRadius(8)
+
+
+            }
+            .flexGrow(1)
+
           }
+          .width('100%')
+          .height('100%')
+          .linearGradient({
+            direction:GradientDirection.RightBottom,
+            colors:[['#c498f4e8',0],['#f31c6bd7',1]]
+          })
         }.tabBar(this.TabBuilder(1,$rawfile('Order.svg'),'订单'))
 
 
