@@ -335,13 +335,18 @@ struct total{
             Scroll(this.scroller){
 
               //订单单元格
-              Column(){
-
+              Column({space:5}){
+                Text('订单类型: 场地预约')
+                  .fontSize(20)
+                Text('订单编号: XXXXX000')
+                  .fontSize(20)
+                Text('')
               }
               .width('90%')
-              .height(30)
+              // .height(30)
               .backgroundColor(Color.White)
               .borderRadius(8)
+              .alignItems(HorizontalAlign.Start)
 
 
             }
