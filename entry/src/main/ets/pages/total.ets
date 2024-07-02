@@ -19,11 +19,15 @@ struct total {
   scroller: Scroller = new Scroller()
   @State
   dills:dill[]=[
-    {type:'场地预约',number:'XXXXX000',cost:15,time:'2024年5月8日11:39',state:'已完成',color:'#ff05e31b'},
-    {},
-    {},
-    {},
-    {},
+    {type:'场地预约',number:'XXXXX000',cost:10,time:'2024年7月1日11:39',state:'已完成',color:'#ff05e31b'},
+    {type:'场地预约',number:'XXXXX001',cost:5,time:'2024年6月25日19:29',state:'已完成',color:'#ff05e31b'},
+    {type:'场地预约',number:'XXXXX002',cost:0,time:'2024年6月8日1:59',state:'已取消',color: '#ffe11111'
+    },
+    {type:'场地预约',number:'XXXXX003',cost:55,time:'2024年5月29日7:30',state:'已完成',color:'#ff05e31b'},
+    {type:'场地预约',number:'XXXXX004',cost:45,time:'2024年5月26日12:01',state:'已完成',color:'#ff05e31b'},
+    {type:'场地预约',number:'XXXXX005',cost:0,time:'2024年5月26日8:29',state:'已取消',color:'#ffe11111'},
+    {type:'场地预约',number:'XXXXX006',cost:15,time:'2024年5月20日11:39',state:'已完成',color:'#ff05e31b'},
+    {type:'场地预约',number:'XXXXX007',cost:12,time:'2024年5月14日10:07',state:'已完成',color:'#ff05e31b'}
   ]
 
   @Builder
