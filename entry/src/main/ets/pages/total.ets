@@ -92,12 +92,13 @@ struct total {
   @State
   MoKuai: shouYeMoKuai[] = [
     { text: '体育教学管理', size: 26 },
-    { text: '体育教学管理', size: 26 },
-    { text: '体育教学管理', size: 26 },
-    { text: '体育教学管理', size: 26 },
-    { text: '体育教学管理', size: 26 },
-    { text: '体育教学管理', size: 26 },
-    { text: '体育教学管理', size: 26 },
+    { text: '学生体质测试', size: 26 },
+    { text: '群体活动管理', size: 26 },
+    { text: '体育志愿者管理', size: 24 },
+    { text: '运动训练管理', size: 26 },
+    { text: '教改科研管理', size: 26 },
+    { text: '运动场馆管理', size: 26 },
+    { text: '第二课堂系统', size: 26 },
   ]
 
   @Builder
@@ -189,19 +190,13 @@ struct total {
               .width('100%')
 
 
-            Scroll(this.scroller) {
-              //下方功能按钮块的滚动组件
-              Row({ space: 10 }) {
-                //横向排布的两列
+            List() {
 
-
-                Column({ space: 20 }) {
-                  //左侧列
-
-
+              ForEach(this.MoKuai, (item: shouYeMoKuai, index: number) => {
+                ListItem() {
                   Column() {
-                    Text('体育教学管理')
-                      .fontSize(26)
+                    Text(item.text)
+                      .fontSize(item.size)
                       .fontWeight(600)
                       .fontColor(Color.White)
                   }
@@ -227,174 +222,15 @@ struct total {
                       })
                     }
                   })
-
-
-                  //   Column() {
-                  //     Text('学生体质测试')
-                  //       .fontSize(26)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-                  //
-                  //
-                  //   Column() {
-                  //     Text('群体活动管理')
-                  //       .fontSize(26)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-                  //
-                  //
-                  //   Column() {
-                  //     Text('体育志愿者管理')
-                  //       .fontSize(24)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-                  //
-                  // }
-                  // .width(180)
-                  //
-                  //
-                  // Column({ space: 20 }) {
-                  //   //右侧列
-                  //
-                  //
-                  //   Column() {
-                  //     Text('教改科研管理')
-                  //       .fontSize(26)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-                  //
-                  //
-                  //   Column() {
-                  //     Text('运动训练管理')
-                  //       .fontSize(26)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-                  //
-                  //
-                  //   Column() {
-                  //     Text('运动场馆管理')
-                  //       .fontSize(26)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-                  //
-                  //
-                  //   Column() {
-                  //     Text('第二课堂系统')
-                  //       .fontSize(26)
-                  //       .fontWeight(600)
-                  //       .fontColor(Color.White)
-                  //   }
-                  //   .width(180)
-                  //   .height(110)
-                  //   .borderRadius(20)
-                  //   .justifyContent(FlexAlign.Center)
-                  //   .linearGradient({
-                  //     colors: [['#ff98f4e8', 0], ['#ff0a34f0', 1]],
-                  //     direction: GradientDirection.LeftBottom
-                  //   })
-                  //   .shadow({
-                  //     radius: 30,
-                  //     offsetX: 10,
-                  //     offsetY: 10
-                  //   })
-
                 }
-                .width(180)
 
-              }
-              .width('100%')
-              .justifyContent(FlexAlign.SpaceBetween)
-              .alignItems(VerticalAlign.Top)
-              .padding({ top: 30, left: 15, right: 15 })
+              })
+
 
             }
             .height(490)
             .width('100%')
-            .scrollable(ScrollDirection.Vertical)
+            // .scrollable(ScrollDirection.Vertical)
             .linearGradient({
               direction: GradientDirection.RightBottom,
               colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
