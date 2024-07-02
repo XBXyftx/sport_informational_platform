@@ -318,9 +318,55 @@ struct total {
 
         //报修
         TabContent() {
-
+          //报修页根组件
           Column() {
-            //报修页根组件
+            Text('报修平台')
+              .width('100%')
+              .textAlign(TextAlign.Center)
+              .margin({ top: 20, bottom: 20 })
+              .fontSize(35)
+              .fontWeight(700)
+
+            List(){
+
+              ListItem(){
+
+                //单块报修单元最外层组件
+                Column(){
+                  //报修服务类别栏
+                  Row({space:15}){
+                    Divider()
+                      .color('#ff084dc1')
+                      .vertical(true)//true为竖向分割线
+                      .strokeWidth(5)
+                      .height('100%')
+                    Text('报修业务')
+                      .fontSize(25)
+                      .fontWeight(600)
+                  }
+                  .width('100%')
+                  .height(30)
+                  .alignItems(VerticalAlign.Center)
+                  .justifyContent(FlexAlign.Start)
+
+                  //具体服务模块区域
+                  Flex(){
+
+                    //服务模块
+                    Row(){
+                      Text('')
+                    }
+
+                  }
+                  .width('100%')
+                }
+
+
+              }
+
+            }
+            .width('100%')
+            .flexGrow(1)
           }
           .width('100%')
           .height('100%')
@@ -346,7 +392,7 @@ struct total {
 
       }
       .width('100%')
-      .flexGrow(1)
+      // .flexGrow(1)
       .vertical(false)
       .scrollable(true)
       .barWidth('100%')
