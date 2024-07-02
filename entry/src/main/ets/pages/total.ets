@@ -1,7 +1,12 @@
 import router from '@ohos.router'
 
 interface dill{
-
+  type:string
+  number:string
+  cost:number
+  time:string
+  state:string
+  color:string
 }
 
 @Entry
@@ -14,6 +19,7 @@ struct total {
   scroller: Scroller = new Scroller()
   @State
   dills:dill[]=[
+    {},
     {},
     {},
     {},
@@ -45,8 +51,9 @@ struct total {
   }
 
   build() {
+    //根组件
     Flex({ direction: FlexDirection.Column }) {
-      //根组件
+
       Row() {
         //置顶栏
         Column() {
@@ -346,7 +353,7 @@ struct total {
                     .fontSize(20)
                   Text('已完成')
                     .fontSize(40)
-                    .fontColor(Color.Green)
+                    .fontColor('#ff05e31b')
 
                 }
                 .margin({top:5})
