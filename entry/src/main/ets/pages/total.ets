@@ -354,11 +354,21 @@ struct total {
 
                     //服务模块
                     Row(){
-                      Text('')
+                      Text('我的报修')
+                        .fontSize(20)
+                      Image($rawfile('myBaoXiu.svg'))
+                        .width(50)
                     }
+                    .backgroundColor(Color.White)
+                    .width(180)
+                    .height(100)
+                    .borderRadius(20)
+                    .padding({left:20,right:15})
+                    .justifyContent(FlexAlign.SpaceBetween)
 
                   }
                   .width('100%')
+                  .padding(15)
                 }
 
 
