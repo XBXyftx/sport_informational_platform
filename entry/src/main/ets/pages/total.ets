@@ -16,6 +16,7 @@ interface shouYeMoKuai {
 
 interface baoXiuZhongLei {
   text: string
+  MK:baoXiuMoKuai[]
 }
 
 interface baoXiuMoKuai {
@@ -109,13 +110,31 @@ struct total {
     { text: '运动场馆管理', size: 26 },
     { text: '第二课堂系统', size: 26 },
   ]
-  @State baoXiuZL: baoXiuZhongLei[] = [
-    { text: '报修业务' },
-    { text: '紧急业务' },
-    { text: '维修确认' },
-    { text: '特殊维修' },
-    { text: '隐患上报' }
+  @State baoXiuMK1:baoXiuMoKuai[]=[
+    {text:'我的报修',img:$rawfile('myBaoXiu.svg')},
+    {text:'我要报修',img:$rawfile('woYaoBaoXiu.svg')},
+    {text:'报修须知',img:$rawfile('xuZhi.svg')},
   ]
+  @State baoXiuMK2:baoXiuMoKuai[]=[
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+  ]
+  @State baoXiuMK3:baoXiuMoKuai[]=[
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+  ]
+  @State baoXiuMK4:baoXiuMoKuai[]=[
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+  ]
+  @State baoXiuMK5:baoXiuMoKuai[]=[
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+  ]
+  @State baoXiuZL: baoXiuZhongLei[] = [
+    { text: '报修业务' ,MK:this.baoXiuMK1},
+    { text: '紧急业务' ,MK:this.baoXiuMK2},
+    { text: '维修确认' ,MK:this.baoXiuMK3},
+    { text: '特殊维修' ,MK:this.baoXiuMK4},
+    { text: '隐患上报' ,MK:this.baoXiuMK5}
+  ]
+
 
   @Builder
   TabBuilder(index: number, picture: Resource, name: string) {
@@ -232,9 +251,9 @@ struct total {
                   .stateStyles({
                     pressed: {
                       .shadow({
-                        radius: 30,
+                        radius: 15,
                         offsetX: 10,
-                        offsetY: -10
+                        offsetY: 10
                       })
                     }
                   })
@@ -356,7 +375,7 @@ struct total {
                         .vertical(true)//true为竖向分割线
                         .strokeWidth(5)
                         .height('100%')
-                      Text('报修业务')
+                      Text(item.text)
                         .fontSize(25)
                         .fontWeight(600)
                     }
@@ -366,25 +385,39 @@ struct total {
                     .justifyContent(FlexAlign.Start)
 
                     //具体服务模块区域
-                    Flex() {
+                    Flex({wrap:FlexWrap.Wrap}) {
 
-                      //服务模块
-                      Row() {
-                        Text('我的报修')
-                          .fontSize(20)
-                        Image($rawfile('myBaoXiu.svg'))
-                          .width(50)
-                      }
-                      .backgroundColor(Color.White)
-                      .width(180)
-                      .height(100)
-                      .borderRadius(20)
-                      .padding({ left: 20, right: 15 })
-                      .justifyContent(FlexAlign.SpaceBetween)
+                      ForEach(item.MK,(it:baoXiuMoKuai,ind:number)=>{
+                        //服务模块
+                        Row() {
+                          Text(it.text)
+                            .fontSize(20)
+                          Image(it.img)
+                            .width(50)
+                        }
+                        .backgroundColor(Color.White)
+                        .width(180)
+                        .height(100)
+                        .borderRadius(20)
+                        .padding({ left: 20, right: 15 })
+                        .margin(6)
+                        .shadow({radius:50,offsetX:20,offsetY:10})
+                        .justifyContent(FlexAlign.SpaceBetween)
+                        .stateStyles({
+                          pressed:{
+                            .shadow({
+                              radius:15,
+                              offsetY:10,
+                              offsetX:20
+                            })
+                          }
+                        })
+                      })
+
 
                     }
                     .width('100%')
-                    .padding(15)
+                    .padding(10)
                   }
                 }
                 .margin({ top: 20, bottom: 20 })
