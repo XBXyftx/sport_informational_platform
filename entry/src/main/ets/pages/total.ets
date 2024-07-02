@@ -14,6 +14,15 @@ interface shouYeMoKuai {
   size: number
 }
 
+interface baoXiuZhongLei{
+  text: string
+}
+
+interface baoXiuMoKuai{
+  text:string
+  img:Resource
+}
+
 @Entry
 @Component
 struct total {
@@ -99,6 +108,14 @@ struct total {
     { text: '教改科研管理', size: 26 },
     { text: '运动场馆管理', size: 26 },
     { text: '第二课堂系统', size: 26 },
+  ]
+
+  @State baoXiuZL:baoXiuZhongLei[]=[
+    {text:'报修业务'},
+    {text:'紧急业务'},
+    {text:'维修确认'},
+    {text:'特殊维修'},
+    {text:'隐患上报'}
   ]
 
   @Builder
