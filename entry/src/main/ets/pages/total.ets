@@ -336,6 +336,12 @@ struct total {
           Column() {
             //我的页根组件
           }
+          .width('100%')
+          .height('100%')
+          .linearGradient({
+            direction: GradientDirection.RightBottom,
+            colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
+          })
         }.tabBar(this.TabBuilder(3, $rawfile('My.svg'), '我的'))
 
       }
