@@ -190,7 +190,7 @@ struct total {
               .width('100%')
 
 
-            List({space:20}) {
+            List({ space: 20 }) {
 
               ForEach(this.MoKuai, (item: shouYeMoKuai, index: number) => {
                 ListItem() {
@@ -223,7 +223,7 @@ struct total {
                     }
                   })
                 }
-                .margin({bottom:10,top:10})
+                .margin({ bottom: 10, top: 10 })
 
               })
 
@@ -235,7 +235,7 @@ struct total {
               direction: GradientDirection.RightBottom,
               colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
             })
-            .padding({top:20,left:10,bottom:10,right:10})
+            .padding({ top: 20, left: 10, bottom: 10, right: 10 })
             .lanes(2)
             .height('495.00vp')
           }
@@ -322,6 +322,12 @@ struct total {
           Column() {
             //报修页根组件
           }
+          .width('100%')
+          .height('100%')
+          .linearGradient({
+            direction: GradientDirection.RightBottom,
+            colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
+          })
         }.tabBar(this.TabBuilder(2, $rawfile('repairs.svg'), '报修'))
 
         //我的
