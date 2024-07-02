@@ -19,7 +19,7 @@ struct total {
   scroller: Scroller = new Scroller()
   @State
   dills:dill[]=[
-    {},
+    {type:'场地预约',number:'XXXXX000',cost:15,time:'2024年5月8日11:39',state:'已完成',color:'#ff05e31b'},
     {},
     {},
     {},
