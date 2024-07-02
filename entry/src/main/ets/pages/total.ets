@@ -338,6 +338,7 @@ struct total {
                     .fontColor(Color.Green)
 
                 }
+                .margin({top:5})
                 .width('100%')
                 .justifyContent(FlexAlign.SpaceBetween)
                 .alignItems(VerticalAlign.Bottom)
