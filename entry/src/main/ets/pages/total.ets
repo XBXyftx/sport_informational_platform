@@ -14,13 +14,13 @@ interface shouYeMoKuai {
   size: number
 }
 
-interface baoXiuZhongLei{
+interface baoXiuZhongLei {
   text: string
 }
 
-interface baoXiuMoKuai{
-  text:string
-  img:Resource
+interface baoXiuMoKuai {
+  text: string
+  img: Resource
 }
 
 @Entry
@@ -109,13 +109,12 @@ struct total {
     { text: '运动场馆管理', size: 26 },
     { text: '第二课堂系统', size: 26 },
   ]
-
-  @State baoXiuZL:baoXiuZhongLei[]=[
-    {text:'报修业务'},
-    {text:'紧急业务'},
-    {text:'维修确认'},
-    {text:'特殊维修'},
-    {text:'隐患上报'}
+  @State baoXiuZL: baoXiuZhongLei[] = [
+    { text: '报修业务' },
+    { text: '紧急业务' },
+    { text: '维修确认' },
+    { text: '特殊维修' },
+    { text: '隐患上报' }
   ]
 
   @Builder
@@ -344,52 +343,53 @@ struct total {
               .fontSize(35)
               .fontWeight(700)
 
-            List(){
+            List() {
 
-              ListItem(){
-
-                //单块报修单元最外层组件
-                Column(){
-                  //报修服务类别栏
-                  Row({space:15}){
-                    Divider()
-                      .color('#ff084dc1')
-                      .vertical(true)//true为竖向分割线
-                      .strokeWidth(5)
-                      .height('100%')
-                    Text('报修业务')
-                      .fontSize(25)
-                      .fontWeight(600)
-                  }
-                  .width('100%')
-                  .height(30)
-                  .alignItems(VerticalAlign.Center)
-                  .justifyContent(FlexAlign.Start)
-
-                  //具体服务模块区域
-                  Flex(){
-
-                    //服务模块
-                    Row(){
-                      Text('我的报修')
-                        .fontSize(20)
-                      Image($rawfile('myBaoXiu.svg'))
-                        .width(50)
+              ForEach(this.baoXiuZL, (item: baoXiuZhongLei, index: number) => {
+                ListItem() {
+                  //单块报修单元最外层组件
+                  Column() {
+                    //报修服务类别栏
+                    Row({ space: 15 }) {
+                      Divider()
+                        .color('#ff084dc1')
+                        .vertical(true)//true为竖向分割线
+                        .strokeWidth(5)
+                        .height('100%')
+                      Text('报修业务')
+                        .fontSize(25)
+                        .fontWeight(600)
                     }
-                    .backgroundColor(Color.White)
-                    .width(180)
-                    .height(100)
-                    .borderRadius(20)
-                    .padding({left:20,right:15})
-                    .justifyContent(FlexAlign.SpaceBetween)
+                    .width('100%')
+                    .height(30)
+                    .alignItems(VerticalAlign.Center)
+                    .justifyContent(FlexAlign.Start)
 
+                    //具体服务模块区域
+                    Flex() {
+
+                      //服务模块
+                      Row() {
+                        Text('我的报修')
+                          .fontSize(20)
+                        Image($rawfile('myBaoXiu.svg'))
+                          .width(50)
+                      }
+                      .backgroundColor(Color.White)
+                      .width(180)
+                      .height(100)
+                      .borderRadius(20)
+                      .padding({ left: 20, right: 15 })
+                      .justifyContent(FlexAlign.SpaceBetween)
+
+                    }
+                    .width('100%')
+                    .padding(15)
                   }
-                  .width('100%')
-                  .padding(15)
                 }
+                .margin({ top: 20, bottom: 20 })
+              })
 
-
-              }
 
             }
             .width('100%')
