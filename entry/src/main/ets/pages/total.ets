@@ -337,44 +337,55 @@ struct total {
               .fontSize(35)
               .fontWeight(700)
 
-            Scroll(this.scroller) {
+            // Scroll(this.scroller) {
+              List({space:30}){
+              
+              ForEach(this.dills,(item:dill,index:number)=>{
+                ListItem(){
+                  //订单单元格
+                  Column({ space: 5 }) {
+                    Text(`订单类型: ${item.type}`)
+                      .fontSize(20)
+                    Text(`订单编号: ${item.number}`)
+                      .fontSize(20)
+                    Text(`实付金额: ${item.number}元`)
+                      .fontSize(20)
+                    Text(`支付时间: ${item.time}`)
+                      .fontSize(20)
+                    Divider()
+                      .color(Color.Black)
+                      .strokeWidth(2)
+                    Row() {
+                      Text('订单状态:')
+                        .fontSize(20)
+                      Text(`${item.state}`)
+                        .fontSize(40)
+                        .fontColor(`${item.color}`)
 
-              //订单单元格
-              Column({ space: 5 }) {
-                Text('订单类型: 场地预约')
-                  .fontSize(20)
-                Text('订单编号: XXXXX000')
-                  .fontSize(20)
-                Text('实付金额: 15元')
-                  .fontSize(20)
-                Text('支付时间: 2024年5月8日11:39')
-                  .fontSize(20)
-                Divider()
-                  .color(Color.Black)
-                  .strokeWidth(2)
-                Row() {
-                  Text('订单状态:')
-                    .fontSize(20)
-                  Text('已完成')
-                    .fontSize(40)
-                    .fontColor('#ff05e31b')
-
+                    }
+                    .margin({ top: 5 })
+                    .width('100%')
+                    .justifyContent(FlexAlign.SpaceBetween)
+                    .alignItems(VerticalAlign.Bottom)
+                  }
+                  .width('90%')
+                  .padding(10)
+                  .backgroundColor(Color.White)
+                  .borderRadius(8)
+                  .alignItems(HorizontalAlign.Start)
+                  .shadow({radius:0})
+                  .stateStyles({
+                    pressed:{.shadow({radius:30,color:Color.Black})}
+                  })
                 }
-                .margin({top:5})
-                .width('100%')
-                .justifyContent(FlexAlign.SpaceBetween)
-                .alignItems(VerticalAlign.Bottom)
-              }
-              .width('90%')
-              .padding(10)
-              .backgroundColor(Color.White)
-              .borderRadius(8)
-              .alignItems(HorizontalAlign.Start)
+                .margin({top:10})
 
-
+              })
 
             }
             .flexGrow(1)
+            .width('100%')
+            .alignListItem(ListItemAlign.Center)
 
           }
           .width('100%')
