@@ -33,7 +33,7 @@ struct total {
       color: '#ff05e31b'
     },
     {
-      type: '场地预约',
+      type: '报修',
       number: 'XXXXX001',
       cost: 5,
       time: '2024年6月25日19:29',
@@ -57,7 +57,7 @@ struct total {
       color: '#ff05e31b'
     },
     {
-      type: '场地预约',
+      type: '报修',
       number: 'XXXXX004',
       cost: 45,
       time: '2024年5月26日12:01',
