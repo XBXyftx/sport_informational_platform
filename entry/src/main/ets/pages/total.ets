@@ -1,5 +1,9 @@
 import router from '@ohos.router'
 
+interface dill{
+
+}
+
 @Entry
 @Component
 struct total {
@@ -8,6 +12,13 @@ struct total {
   @State currentIndex: number = 0 //是否被选中的判别器
   private controller: TabsController = new TabsController()
   scroller: Scroller = new Scroller()
+  @State
+  dills:dill[]=[
+    {},
+    {},
+    {},
+    {},
+  ]
 
   @Builder
   TabBuilder(index: number, picture: Resource, name: string) {
@@ -348,6 +359,8 @@ struct total {
               .backgroundColor(Color.White)
               .borderRadius(8)
               .alignItems(HorizontalAlign.Start)
+
+
 
             }
             .flexGrow(1)
