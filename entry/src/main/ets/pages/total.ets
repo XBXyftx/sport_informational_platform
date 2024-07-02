@@ -333,11 +333,17 @@ struct total {
                 Row() {
                   Text('订单状态:')
                     .fontSize(20)
+                  Text('已完成')
+                    .fontSize(40)
+                    .fontColor(Color.Green)
 
                 }
+                .width('100%')
+                .justifyContent(FlexAlign.SpaceBetween)
+                .alignItems(VerticalAlign.Bottom)
               }
               .width('90%')
-              // .height(30)
+              .padding(10)
               .backgroundColor(Color.White)
               .borderRadius(8)
               .alignItems(HorizontalAlign.Start)
