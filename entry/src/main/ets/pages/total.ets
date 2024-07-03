@@ -395,6 +395,7 @@ struct total {
                             .fontSize(20)
                           Image(it.img)
                             .width(50)
+                            .fillColor(it.color)
                         }
                         .backgroundColor(Color.White)
                         .width(180)
