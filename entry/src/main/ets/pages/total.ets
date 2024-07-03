@@ -112,21 +112,21 @@ struct total {
     { text: '第二课堂系统', size: 26 },
   ]
   @State baoXiuMK1:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('myBaoXiu.svg'),color: '#ff0dece9' },
-    {text:'我要报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'},
-    {text:'报修须知',img:$rawfile('xuZhi.svg'),color:'#ff0dece9'},
+    {text:'我的报修',img:$rawfile('myBaoXiu.svg'),color: '' },
+    {text:'我要报修',img:$rawfile('woYaoBaoXiu.svg'),color:''},
+    {text:'报修须知',img:$rawfile('xuZhi.svg'),color:''},
   ]
   @State baoXiuMK2:baoXiuMoKuai[]=[
     {text:'紧急报修',img:$rawfile('jinJiBaoXiu.svg'),color: '#ffdb1010' }
   ]
   @State baoXiuMK3:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'}
+    {text:'维修确认',img:$rawfile('weiXiuQueRen.svg'),color:''}
   ]
   @State baoXiuMK4:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'}
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:''}
   ]
   @State baoXiuMK5:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'}
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:''}
   ]
   @State baoXiuZL: baoXiuZhongLei[] = [
     { text: '报修业务' ,MK:this.baoXiuMK1},
