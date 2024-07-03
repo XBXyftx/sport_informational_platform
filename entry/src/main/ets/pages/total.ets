@@ -123,16 +123,16 @@ struct total {
     {text:'维修确认',img:$rawfile('weiXiuQueRen.svg'),color:''}
   ]
   @State baoXiuMK4:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:''}
+    {text:'特殊报修',img:$rawfile('teShu.svg'),color:''}
   ]
   @State baoXiuMK5:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:''}
+    {text:'隐患上报',img:$rawfile('woYaoBaoXiu.svg'),color:''}
   ]
   @State baoXiuZL: baoXiuZhongLei[] = [
     { text: '报修业务' ,MK:this.baoXiuMK1},
     { text: '紧急业务' ,MK:this.baoXiuMK2},
     { text: '维修确认' ,MK:this.baoXiuMK3},
-    { text: '特殊维修' ,MK:this.baoXiuMK4},
+    { text: '特殊业务' ,MK:this.baoXiuMK4},
     { text: '隐患上报' ,MK:this.baoXiuMK5}
   ]
 
