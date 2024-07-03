@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\Lenovo\\.ohos\\config\\auto_debug_Sport_Informational_Platform_com.example.sport_informational_platform_10086000139593308.cer",
+          "storePassword": "0000001BF59AAA5C9D97704B384767431426ABDA558076E3BF3729E6EF830EF1CA405740E4738E9C2818A0",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B69389745A8E47C5656A7052A36BBF32355207C0F86E7183510E0238F7601BD63BC31C2AF02FD1C",
+          "profile": "C:\\Users\\Lenovo\\.ohos\\config\\auto_debug_Sport_Informational_Platform_com.example.sport_informational_platform_10086000139593308.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\Lenovo\\.ohos\\config\\auto_debug_Sport_Informational_Platform_com.example.sport_informational_platform_10086000139593308.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [

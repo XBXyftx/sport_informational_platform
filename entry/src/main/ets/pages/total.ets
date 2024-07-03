@@ -22,6 +22,7 @@ interface baoXiuZhongLei {
 interface baoXiuMoKuai {
   text: string
   img: Resource
+  color:string
 }
 
 @Entry
@@ -111,21 +112,21 @@ struct total {
     { text: '第二课堂系统', size: 26 },
   ]
   @State baoXiuMK1:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('myBaoXiu.svg')},
-    {text:'我要报修',img:$rawfile('woYaoBaoXiu.svg')},
-    {text:'报修须知',img:$rawfile('xuZhi.svg')},
+    {text:'我的报修',img:$rawfile('myBaoXiu.svg'),color: '#ff0dece9' },
+    {text:'我要报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'},
+    {text:'报修须知',img:$rawfile('xuZhi.svg'),color:'#ff0dece9'},
   ]
   @State baoXiuMK2:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+    {text:'紧急报修',img:$rawfile('jinJiBaoXiu.svg'),color: '#ffdb1010' }
   ]
   @State baoXiuMK3:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'}
   ]
   @State baoXiuMK4:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'}
   ]
   @State baoXiuMK5:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg')}
+    {text:'我的报修',img:$rawfile('woYaoBaoXiu.svg'),color:'#ff0dece9'}
   ]
   @State baoXiuZL: baoXiuZhongLei[] = [
     { text: '报修业务' ,MK:this.baoXiuMK1},
