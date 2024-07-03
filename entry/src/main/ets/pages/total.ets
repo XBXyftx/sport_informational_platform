@@ -16,13 +16,13 @@ interface shouYeMoKuai {
 
 interface baoXiuZhongLei {
   text: string
-  MK:baoXiuMoKuai[]
+  MK: baoXiuMoKuai[]
 }
 
 interface baoXiuMoKuai {
   text: string
   img: Resource
-  color:string
+  color: string
 }
 
 @Entry
@@ -111,31 +111,30 @@ struct total {
     { text: '运动场馆管理', size: 26 },
     { text: '第二课堂系统', size: 26 },
   ]
-  @State baoXiuMK1:baoXiuMoKuai[]=[
-    {text:'我的报修',img:$rawfile('myBaoXiu.svg'),color: '' },
-    {text:'我要报修',img:$rawfile('woYaoBaoXiu.svg'),color:''},
-    {text:'报修须知',img:$rawfile('xuZhi.svg'),color:''},
+  @State baoXiuMK1: baoXiuMoKuai[] = [
+    { text: '我的报修', img: $rawfile('myBaoXiu.svg'), color: '' },
+    { text: '我要报修', img: $rawfile('woYaoBaoXiu.svg'), color: '' },
+    { text: '报修须知', img: $rawfile('xuZhi.svg'), color: '' },
   ]
-  @State baoXiuMK2:baoXiuMoKuai[]=[
-    {text:'紧急报修',img:$rawfile('jinJiBaoXiu.svg'),color: '#ffdb1010' }
+  @State baoXiuMK2: baoXiuMoKuai[] = [
+    { text: '紧急报修', img: $rawfile('jinJiBaoXiu.svg'), color: '#ffdb1010' }
   ]
-  @State baoXiuMK3:baoXiuMoKuai[]=[
-    {text:'维修确认',img:$rawfile('weiXiuQueRen.svg'),color:''}
+  @State baoXiuMK3: baoXiuMoKuai[] = [
+    { text: '维修确认', img: $rawfile('weiXiuQueRen.svg'), color: '' }
   ]
-  @State baoXiuMK4:baoXiuMoKuai[]=[
-    {text:'特殊报修',img:$rawfile('teShu.svg'),color:''}
+  @State baoXiuMK4: baoXiuMoKuai[] = [
+    { text: '特殊报修', img: $rawfile('teShu.svg'), color: '' }
   ]
-  @State baoXiuMK5:baoXiuMoKuai[]=[
-    {text:'隐患上报',img:$rawfile('woYaoBaoXiu.svg'),color:''}
+  @State baoXiuMK5: baoXiuMoKuai[] = [
+    { text: '隐患上报', img: $rawfile('yinHuan.svg'), color: '' }
   ]
   @State baoXiuZL: baoXiuZhongLei[] = [
-    { text: '报修业务' ,MK:this.baoXiuMK1},
-    { text: '紧急业务' ,MK:this.baoXiuMK2},
-    { text: '维修确认' ,MK:this.baoXiuMK3},
-    { text: '特殊业务' ,MK:this.baoXiuMK4},
-    { text: '隐患上报' ,MK:this.baoXiuMK5}
+    { text: '报修业务', MK: this.baoXiuMK1 },
+    { text: '紧急业务', MK: this.baoXiuMK2 },
+    { text: '维修确认', MK: this.baoXiuMK3 },
+    { text: '特殊业务', MK: this.baoXiuMK4 },
+    { text: '隐患上报', MK: this.baoXiuMK5 }
   ]
-
 
   @Builder
   TabBuilder(index: number, picture: Resource, name: string) {
@@ -386,9 +385,9 @@ struct total {
                     .justifyContent(FlexAlign.Start)
 
                     //具体服务模块区域
-                    Flex({wrap:FlexWrap.Wrap}) {
+                    Flex({ wrap: FlexWrap.Wrap }) {
 
-                      ForEach(item.MK,(it:baoXiuMoKuai,ind:number)=>{
+                      ForEach(item.MK, (it: baoXiuMoKuai, ind: number) => {
                         //服务模块
                         Row() {
                           Text(it.text)
@@ -403,14 +402,14 @@ struct total {
                         .borderRadius(20)
                         .padding({ left: 20, right: 15 })
                         .margin(6)
-                        .shadow({radius:50,offsetX:20,offsetY:10})
+                        .shadow({ radius: 50, offsetX: 20, offsetY: 10 })
                         .justifyContent(FlexAlign.SpaceBetween)
                         .stateStyles({
-                          pressed:{
+                          pressed: {
                             .shadow({
-                              radius:15,
-                              offsetY:10,
-                              offsetX:20
+                              radius: 15,
+                              offsetY: 10,
+                              offsetX: 20
                             })
                           }
                         })
@@ -429,6 +428,7 @@ struct total {
             }
             .width('100%')
             .flexGrow(1)
+            .margin({ bottom: 70 })
           }
           .width('100%')
           .height('100%')
