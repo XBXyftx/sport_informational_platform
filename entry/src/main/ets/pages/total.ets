@@ -484,6 +484,15 @@ struct total {
             .width('100%')
             .backgroundColor('#5affffff')
 
+            //下半区功能栏根组件
+            List(){
+
+            }
+            .flexGrow(1)
+            .padding({left:5,right:5})
+            .width('100%')
+            .margin({bottom:70})
+
           }
           .width('100%')
           .height('100%')
