@@ -485,15 +485,23 @@ struct total {
             .backgroundColor('#5affffff')
 
             //下半区功能栏根组件
-            List(){
+            List({space:10}){
 
               ListItem(){
                 Text('我的空间')
-                  .fontSize(20)
+                  .fontSize(25)
+                  .fontWeight(600)
+                  .margin(5)
               }
               .width('100%')
-              .backgroundColor('#5affffff')
+              .backgroundColor('#d2ffffff')
               .margin({top:20})
+
+              ListItem(){
+
+              }
+              .width('100%')
+              .backgroundColor('#d2ffffff')
 
             }
             .flexGrow(1)
