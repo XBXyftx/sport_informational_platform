@@ -441,19 +441,19 @@ struct total {
         //我的
         TabContent() {
           //我的页根组件
-          Column() {
+          Column({ space: 10 }) {
             //上半区固定栏
-            Column(){
+            Column() {
 
               //右上角设置外层组件
-              Row(){
+              Row() {
                 //设置图标包裹组件
-                Row(){
+                Row() {
                   Image($rawfile('setting.svg'))
-                    .width(45)
+                    .width(25)
                 }
-                .width(50)
-                .height(50)
+                .width(30)
+                .height(30)
                 .margin(6)
                 .justifyContent(FlexAlign.Center)
                 .backgroundColor('#c0bbbaba')
@@ -462,13 +462,27 @@ struct total {
               .width('100%')
               .justifyContent(FlexAlign.End)
 
+              //头像昵称学号栏
+              Column({ space: 10 }) {
+
+                Image($rawfile('kongTouXiang.svg'))
+                  .width(80)
+
+                Text('姓名:XXX')
+                  .fontSize(18)
+                // .opacity(1)
+                Text('学号:202XXXXXXX')
+                  .fontSize(18)
+                Text('学院:XXX学院')
+                  .fontSize(18)
+                  .margin({ bottom: 10 })
+              }
+              .width('100%')
+              .alignItems(HorizontalAlign.Center)
 
             }
             .width('100%')
-            .backgroundColor(Color.White)
-            .opacity(0.7)
-
-
+            .backgroundColor('#5affffff')
 
           }
           .width('100%')
