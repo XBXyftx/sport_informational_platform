@@ -441,7 +441,7 @@ struct total {
         //我的
         TabContent() {
           //我的页根组件
-          Column({ space: 10 }) {
+          Column() {
             //上半区固定栏
             Column() {
 
@@ -487,9 +487,16 @@ struct total {
             //下半区功能栏根组件
             List(){
 
+              ListItem(){
+                Text('我的空间')
+                  .fontSize(20)
+              }
+              .width('100%')
+              .backgroundColor('#5affffff')
+              .margin({top:20})
+
             }
             .flexGrow(1)
-            .padding({left:5,right:5})
             .width('100%')
             .margin({bottom:70})
 
