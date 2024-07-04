@@ -465,6 +465,8 @@ struct total {
 
             }
             .width('100%')
+            .backgroundColor(Color.White)
+            .opacity(0.7)
 
 
 
