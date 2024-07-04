@@ -440,9 +440,34 @@ struct total {
 
         //我的
         TabContent() {
-
+          //我的页根组件
           Column() {
-            //我的页根组件
+            //上半区固定栏
+            Column(){
+
+              //右上角设置外层组件
+              Row(){
+                //设置图标包裹组件
+                Row(){
+                  Image($rawfile('setting.svg'))
+                    .width(45)
+                }
+                .width(50)
+                .height(50)
+                .margin(6)
+                .justifyContent(FlexAlign.Center)
+                .backgroundColor('#c0bbbaba')
+                .borderRadius(35)
+              }
+              .width('100%')
+              .justifyContent(FlexAlign.End)
+
+
+            }
+            .width('100%')
+
+
+
           }
           .width('100%')
           .height('100%')
