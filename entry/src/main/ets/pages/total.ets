@@ -498,6 +498,8 @@ struct total {
               .margin({top:20})
 
               ListItem(){
+
+                //模块最外层组件
                 Row(){
                   //左侧列表名
                   Column({space:10}){
@@ -512,7 +514,9 @@ struct total {
                   .alignItems(HorizontalAlign.Start)
                 }
                 .width('100%')
+                .padding(5)
                 .justifyContent(FlexAlign.Start)
+
               }
               .width('100%')
               .backgroundColor('#d2ffffff')
