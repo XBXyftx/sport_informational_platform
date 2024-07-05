@@ -498,7 +498,7 @@ struct total {
         //我的
         TabContent() {
           //我的页根组件
-          Column() {
+          Flex({direction:FlexDirection.Column}) {
             //上半区固定栏
             Column() {
 
@@ -544,6 +544,7 @@ struct total {
               direction: GradientDirection.LeftBottom,
               colors: [['#c4c20df7', 0], ['#f300fffc', 1]]
             })
+            .flexBasis(320)
 
             //下半区功能栏根组件
             List({ space: 20 }) {
@@ -601,11 +602,10 @@ struct total {
 
 
             }
-            .height(530)
+            // .height(530)
             .width('100%')
-
-
-            // .margin({ bottom: 70 })
+            .flexGrow(1)
+            .padding({ bottom: 5 })
 
           }
           .width('100%')
