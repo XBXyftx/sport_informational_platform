@@ -274,10 +274,11 @@ struct total {
 
       Tabs({ barPosition: BarPosition.End, controller: this.controller }) {
         //下半部分
+        //首页
         TabContent() {
-          //首页
-          Column() {
-            //首页tabContent根组件
+          //首页tabContent根组件
+          Flex({direction:FlexDirection.Column}) {
+
             Image($rawfile('Total_Sport_Picture.png'))
               .width('100%')
 
@@ -323,16 +324,17 @@ struct total {
             }
             .width('100%')
             // .scrollable(ScrollDirection.Vertical)
-            .linearGradient({
-              direction: GradientDirection.RightBottom,
-              colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
-            })
             .padding({ top: 20, left: 10, bottom: 10, right: 10 })
             .lanes(2)
             .height('495.00vp')
           }
           .width('100%')
           .height('100%')
+          .padding({bottom:5})
+          .linearGradient({
+            direction: GradientDirection.RightBottom,
+            colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
+          })
         }.tabBar(this.TabBuilder(0, $rawfile('Firstpage.svg'), '首页'))
 
         //订单
