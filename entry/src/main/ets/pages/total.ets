@@ -150,16 +150,16 @@ struct total {
       details: '明天暂时没有课程哦好好休息吧'
     },
     {
-      title: '我的课表',
-      etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
+      title: '学生选课',
+      etitle: 'curricula-variable',
+      img: $rawfile('xuanKe.svg'),
+      details: '选课系统暂未开放'
     },
     {
-      title: '我的课表',
-      etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
+      title: '空教室查询',
+      etitle: 'empty classroom',
+      img: $rawfile('kongJiaoShi.svg'),
+      details: '当前空教室:WLA-102，WLA-205，WLA-301，XXB-301...'
     },
     {
       title: '我的课表',
@@ -569,7 +569,7 @@ struct total {
                 ListItem() {
 
                   //模块最外层组件
-                  Row() {
+                  Row({space:10}) {
                     //左侧列表名
                     Column({ space: 10 }) {
                       Text(item.title)
@@ -581,6 +581,7 @@ struct total {
                     }
                     .justifyContent(FlexAlign.Center)
                     .alignItems(HorizontalAlign.Start)
+                    .width(120)
 
                     //中央功能图片
                     Image(item.img)
@@ -594,10 +595,12 @@ struct total {
                     //右箭头
                     Image($rawfile('youJianTou.svg'))
                       .width(35)
+                      .alignSelf(ItemAlign.Center)
                   }
                   .width('100%')
                   .padding({ left: 5, right: 5, top: 15, bottom: 15 })
-                  .justifyContent(FlexAlign.SpaceBetween)
+                  .justifyContent(FlexAlign.Start)
+                  .alignItems(VerticalAlign.Center)
 
                 }
                 .width('100%')
