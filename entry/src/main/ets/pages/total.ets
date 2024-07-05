@@ -302,14 +302,14 @@ struct total {
                     direction: GradientDirection.LeftBottom
                   })
                   .shadow({
-                    radius: 30,
+                    radius: 40,
                     offsetX: 10,
                     offsetY: 10
                   })
                   .stateStyles({
                     pressed: {
                       .shadow({
-                        radius: 15,
+                        radius: 10,
                         offsetX: 10,
                         offsetY: 10
                       })
