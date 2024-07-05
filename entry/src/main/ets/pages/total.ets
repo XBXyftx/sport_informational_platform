@@ -25,6 +25,13 @@ interface baoXiuMoKuai {
   color: string
 }
 
+interface myMoKuai {
+  title: string
+  etitle: string
+  img: Resource
+  details: string
+}
+
 @Entry
 @Component
 struct total {
@@ -134,6 +141,9 @@ struct total {
     { text: '维修确认', MK: this.baoXiuMK3 },
     { text: '特殊业务', MK: this.baoXiuMK4 },
     { text: '隐患上报', MK: this.baoXiuMK5 }
+  ]
+  @State woDeMK: myMoKuai[] = [
+    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'}
   ]
 
   @Builder
@@ -533,7 +543,7 @@ struct total {
                     .width(35)
                 }
                 .width('100%')
-                .padding({left:5,right:5,top:10,bottom:10})
+                .padding({ left: 5, right: 5, top: 10, bottom: 10 })
                 .justifyContent(FlexAlign.SpaceBetween)
 
               }
