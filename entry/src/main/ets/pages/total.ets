@@ -518,6 +518,10 @@ struct total {
                   //中央功能图片
                   Image($rawfile('keBiao.svg'))
                     .height(50)
+
+                  Text('明天暂时没有课程哦好好休息吧')
+                    .width(160)
+                    .opacity(0.8)
                 }
                 .width('100%')
                 .padding(5)
