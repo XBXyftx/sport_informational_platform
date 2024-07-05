@@ -523,9 +523,13 @@ struct total {
                   Text('明天暂时没有课程哦好好休息吧')
                     .width(160)
                     .opacity(0.8)
+
+                  //右箭头
+                  Image($rawfile('youJianTou.svg'))
+                    .width(35)
                 }
                 .width('100%')
-                .padding(5)
+                .padding({left:5,right:5,top:10,bottom:10})
                 .justifyContent(FlexAlign.SpaceBetween)
 
               }
