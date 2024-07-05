@@ -145,36 +145,36 @@ struct total {
   @State woDeMK: myMoKuai[] = [
     {
       title: '我的课表',
-      etitle: 'class schedule',
+      etitle: 'Class schedule',
       img: $rawfile('keBiao.svg'),
       details: '明天暂时没有课程哦好好休息吧'
     },
     {
       title: '学生选课',
-      etitle: 'curricula-variable',
+      etitle: 'Curricula-variable',
       img: $rawfile('xuanKe.svg'),
       details: '选课系统暂未开放'
     },
     {
       title: '空教室查询',
-      etitle: 'empty classroom',
+      etitle: 'Empty classroom',
       img: $rawfile('kongJiaoShi.svg'),
       details: '当前空教室:WLA-102，WLA-205，WLA-301，XXB-301...'
     },
+    // {
+    //   title: '教室借用',
+    //   etitle: 'Classroom borrowing',
+    //   img: $rawfile('jieJiaoShi.svg'),
+    //   details: '申请空教室使用权'
+    // },
     {
-      title: '我的课表',
-      etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
+      title: '我的成绩',
+      etitle: 'My grades',
+      img: $rawfile('chengJi1.svg'),
+      details: '来看看自己的最新成绩'
     },
     {
-      title: '我的课表',
-      etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
-    },
-    {
-      title: '我的课表',
+      title: '学分查询',
       etitle: 'class schedule',
       img: $rawfile('keBiao.svg'),
       details: '明天暂时没有课程哦好好休息吧'
