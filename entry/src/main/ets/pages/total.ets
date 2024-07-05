@@ -482,7 +482,11 @@ struct total {
 
             }
             .width('100%')
-            .backgroundColor('#5affffff')
+            // .backgroundColor('#5affffff')
+            .linearGradient({
+              direction: GradientDirection.LeftBottom,
+              colors: [['#c4c20df7', 0], ['#f300fffc', 1]]
+            })
 
             //下半区功能栏根组件
             List({ space: 10 }) {
