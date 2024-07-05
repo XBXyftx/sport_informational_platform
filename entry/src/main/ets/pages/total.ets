@@ -498,7 +498,21 @@ struct total {
               .margin({top:20})
 
               ListItem(){
-
+                Row(){
+                  //左侧列表名
+                  Column({space:10}){
+                    Text('我的课表')
+                      .fontSize(24)
+                      .fontWeight(500)
+                    Text('class schedule')
+                      .opacity(0.6)
+                      .fontSize(16)
+                  }
+                  .justifyContent(FlexAlign.Center)
+                  .alignItems(HorizontalAlign.Start)
+                }
+                .width('100%')
+                .justifyContent(FlexAlign.Start)
               }
               .width('100%')
               .backgroundColor('#d2ffffff')
