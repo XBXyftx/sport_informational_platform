@@ -143,11 +143,36 @@ struct total {
     { text: '隐患上报', MK: this.baoXiuMK5 }
   ]
   @State woDeMK: myMoKuai[] = [
-    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
-    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
-    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
-    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
-    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
   ]
 
   @Builder
@@ -516,7 +541,7 @@ struct total {
               .backgroundColor('#d2ffffff')
               .margin({ top: 20 })
 
-              ForEach(this.woDeMK,(item:myMoKuai,index:number)=>{
+              ForEach(this.woDeMK, (item: myMoKuai, index: number) => {
                 //具体功能模块
                 ListItem() {
 
@@ -555,7 +580,6 @@ struct total {
                 .width('100%')
                 .backgroundColor('#d2ffffff')
               })
-
 
 
             }
