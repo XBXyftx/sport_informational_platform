@@ -515,12 +515,13 @@ struct total {
                   .justifyContent(FlexAlign.Center)
                   .alignItems(HorizontalAlign.Start)
 
+                  //中央功能图片
                   Image($rawfile('keBiao.svg'))
                     .height(50)
                 }
                 .width('100%')
                 .padding(5)
-                .justifyContent(FlexAlign.Start)
+                .justifyContent(FlexAlign.SpaceBetween)
 
               }
               .width('100%')
