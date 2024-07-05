@@ -485,9 +485,10 @@ struct total {
             .backgroundColor('#5affffff')
 
             //下半区功能栏根组件
-            List({space:10}){
+            List({ space: 10 }) {
 
-              ListItem(){
+              //我的空间横幅
+              ListItem() {
                 Text('我的空间')
                   .fontSize(25)
                   .fontWeight(600)
@@ -495,14 +496,15 @@ struct total {
               }
               .width('100%')
               .backgroundColor('#d2ffffff')
-              .margin({top:20})
+              .margin({ top: 20 })
 
-              ListItem(){
+              //具体功能模块
+              ListItem() {
 
                 //模块最外层组件
-                Row(){
+                Row() {
                   //左侧列表名
-                  Column({space:10}){
+                  Column({ space: 10 }) {
                     Text('我的课表')
                       .fontSize(24)
                       .fontWeight(500)
@@ -512,6 +514,9 @@ struct total {
                   }
                   .justifyContent(FlexAlign.Center)
                   .alignItems(HorizontalAlign.Start)
+
+                  Image($rawfile('keBiao.svg'))
+                    .height(50)
                 }
                 .width('100%')
                 .padding(5)
@@ -524,7 +529,7 @@ struct total {
             }
             .flexGrow(1)
             .width('100%')
-            .margin({bottom:70})
+            .margin({ bottom: 70 })
 
           }
           .width('100%')
