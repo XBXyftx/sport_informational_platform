@@ -519,6 +519,7 @@ struct total {
                   Image($rawfile('keBiao.svg'))
                     .height(50)
 
+                  //简介文字
                   Text('明天暂时没有课程哦好好休息吧')
                     .width(160)
                     .opacity(0.8)
