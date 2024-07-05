@@ -173,6 +173,24 @@ struct total {
       img: $rawfile('keBiao.svg'),
       details: '明天暂时没有课程哦好好休息吧'
     },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
+    {
+      title: '我的课表',
+      etitle: 'class schedule',
+      img: $rawfile('keBiao.svg'),
+      details: '明天暂时没有课程哦好好休息吧'
+    },
   ]
 
   @Builder
@@ -583,9 +601,11 @@ struct total {
 
 
             }
-            .flexGrow(1)
+            .height(530)
             .width('100%')
-            .margin({ bottom: 70 })
+
+
+            // .margin({ bottom: 70 })
 
           }
           .width('100%')
