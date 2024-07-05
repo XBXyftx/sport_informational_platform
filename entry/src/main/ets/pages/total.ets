@@ -591,6 +591,8 @@ struct total {
                     Text(item.details)
                       .width(160)
                       .opacity(0.8)
+                      .maxLines(3)
+                      .textOverflow({overflow:TextOverflow.Ellipsis})
 
                     //右箭头
                     Image($rawfile('youJianTou.svg'))
