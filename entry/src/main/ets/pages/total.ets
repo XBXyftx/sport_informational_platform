@@ -143,7 +143,11 @@ struct total {
     { text: '隐患上报', MK: this.baoXiuMK5 }
   ]
   @State woDeMK: myMoKuai[] = [
-    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'}
+    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
+    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
+    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
+    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
+    {title:'我的课表',etitle:'class schedule',img:$rawfile('keBiao.svg'),details:'明天暂时没有课程哦好好休息吧'},
   ]
 
   @Builder
@@ -499,7 +503,7 @@ struct total {
             })
 
             //下半区功能栏根组件
-            List({ space: 10 }) {
+            List({ space: 20 }) {
 
               //我的空间横幅
               ListItem() {
@@ -512,43 +516,47 @@ struct total {
               .backgroundColor('#d2ffffff')
               .margin({ top: 20 })
 
-              //具体功能模块
-              ListItem() {
+              ForEach(this.woDeMK,(item:myMoKuai,index:number)=>{
+                //具体功能模块
+                ListItem() {
 
-                //模块最外层组件
-                Row() {
-                  //左侧列表名
-                  Column({ space: 10 }) {
-                    Text('我的课表')
-                      .fontSize(24)
-                      .fontWeight(500)
-                    Text('class schedule')
-                      .opacity(0.6)
-                      .fontSize(16)
+                  //模块最外层组件
+                  Row() {
+                    //左侧列表名
+                    Column({ space: 10 }) {
+                      Text(item.title)
+                        .fontSize(24)
+                        .fontWeight(500)
+                      Text(item.etitle)
+                        .opacity(0.6)
+                        .fontSize(16)
+                    }
+                    .justifyContent(FlexAlign.Center)
+                    .alignItems(HorizontalAlign.Start)
+
+                    //中央功能图片
+                    Image(item.img)
+                      .height(50)
+
+                    //简介文字
+                    Text(item.details)
+                      .width(160)
+                      .opacity(0.8)
+
+                    //右箭头
+                    Image($rawfile('youJianTou.svg'))
+                      .width(35)
                   }
-                  .justifyContent(FlexAlign.Center)
-                  .alignItems(HorizontalAlign.Start)
+                  .width('100%')
+                  .padding({ left: 5, right: 5, top: 15, bottom: 15 })
+                  .justifyContent(FlexAlign.SpaceBetween)
 
-                  //中央功能图片
-                  Image($rawfile('keBiao.svg'))
-                    .height(50)
-
-                  //简介文字
-                  Text('明天暂时没有课程哦好好休息吧')
-                    .width(160)
-                    .opacity(0.8)
-
-                  //右箭头
-                  Image($rawfile('youJianTou.svg'))
-                    .width(35)
                 }
                 .width('100%')
-                .padding({ left: 5, right: 5, top: 10, bottom: 10 })
-                .justifyContent(FlexAlign.SpaceBetween)
+                .backgroundColor('#d2ffffff')
+              })
 
-              }
-              .width('100%')
-              .backgroundColor('#d2ffffff')
+
 
             }
             .flexGrow(1)
