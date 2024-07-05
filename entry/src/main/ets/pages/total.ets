@@ -338,7 +338,7 @@ struct total {
         //订单
         TabContent() {
 
-          Column() {
+          Flex({ direction: FlexDirection.Column }) {
             //订单页根组件
             Text('您的订单')
               .width('100%')
@@ -346,6 +346,7 @@ struct total {
               .margin({ top: 20, bottom: 20 })
               .fontSize(35)
               .fontWeight(700)
+              .flexBasis(85)
 
             // Scroll(this.scroller) {
             List({ space: 30 }) {
@@ -397,6 +398,7 @@ struct total {
             }
             .flexGrow(1)
             .width('100%')
+            .padding({ bottom: 5 })
             .alignListItem(ListItemAlign.Center)
 
           }
@@ -498,7 +500,7 @@ struct total {
         //我的
         TabContent() {
           //我的页根组件
-          Flex({direction:FlexDirection.Column}) {
+          Flex({ direction: FlexDirection.Column }) {
             //上半区固定栏
             Column() {
 
