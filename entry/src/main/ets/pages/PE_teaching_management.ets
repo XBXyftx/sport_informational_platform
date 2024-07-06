@@ -78,9 +78,16 @@ struct PE_T_M{
 
         //教学管理模块
         ListItem(){
-
+          Row(){
+            Image($rawfile('jiaoShiGuanLi.svg'))
+              .height(50)
+          }
+          .width('100%')
+          .justifyContent(FlexAlign.Start)
+          .padding({left:5,right:5,top:10,bottom:10})
         }
         .width('100%')
+        .backgroundColor('#9affffff')
       }
       .flexGrow(1)
       .width('100%')
