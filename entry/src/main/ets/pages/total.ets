@@ -221,10 +221,10 @@ struct total {
     //根组件
     Flex({ direction: FlexDirection.Column }) {
 
+      //置顶栏
       Row() {
-        //置顶栏
+        //最上角叉子组件
         Column() {
-          //最上角叉子组件
           Image($rawfile('X.svg'))
             .height(20)
             .fillColor(Color.White)
@@ -249,8 +249,8 @@ struct total {
           .fontColor(Color.White)
           .fontWeight(600)
 
+        //右上角更多组件
         Column() {
-          //右上角更多组件
           Image($rawfile('more_sport.svg'))
             .width(30)
         }
