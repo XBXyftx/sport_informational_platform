@@ -58,6 +58,16 @@ struct PE_T_M{
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
 
+      //标题
+      Row(){
+        Text('体育教学管理')
+          .fontSize(30)
+          .fontWeight(700)
+      }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
+      .margin({top:10})
+
     }
     .width('100%')
     .height('100%')
