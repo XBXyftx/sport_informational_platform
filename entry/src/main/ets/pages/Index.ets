@@ -8,7 +8,7 @@ struct Index {
   @State verification_code : Number = 0
 
   build() {
-    Column(){
+    Flex({direction:FlexDirection.Column}){
       //根组件
       Row(){
         //置顶栏
@@ -52,7 +52,7 @@ struct Index {
         })
 
       }
-      .height(60)
+      .flexBasis(60)
       .width('100%')
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
