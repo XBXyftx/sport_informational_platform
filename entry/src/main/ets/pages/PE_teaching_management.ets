@@ -1,5 +1,6 @@
 import router from '@ohos.router'
 
+//体育教学管理详情页
 @Entry
 @Component
 struct PE_T_M{
