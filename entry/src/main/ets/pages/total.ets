@@ -176,21 +176,21 @@ struct total {
     {
       title: '学分查询',
       etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
+      img: $rawfile('xueFen.svg'),
+      details: '查询学业完成度'
     },
     {
-      title: '我的课表',
-      etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
+      title: '校园调研',
+      etitle: 'Campus research',
+      img: $rawfile('diaoYan.svg'),
+      details: '完成调研问卷，及时反馈问题'
     },
-    {
-      title: '我的课表',
-      etitle: 'class schedule',
-      img: $rawfile('keBiao.svg'),
-      details: '明天暂时没有课程哦好好休息吧'
-    },
+    // {
+    //   title: '我的课表',
+    //   etitle: 'class schedule',
+    //   img: $rawfile('keBiao.svg'),
+    //   details: '明天暂时没有课程哦好好休息吧'
+    // },
   ]
 
   @Builder
