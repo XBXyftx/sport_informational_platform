@@ -66,7 +66,12 @@ struct PE_T_M{
       }
       .width('100%')
       .justifyContent(FlexAlign.Center)
-      .margin({top:10})
+      .margin({top:10,bottom:10})
+
+      Divider()
+        .strokeWidth(3)
+        .color(Color.Black)
+
 
     }
     .width('100%')
