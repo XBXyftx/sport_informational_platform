@@ -7,6 +7,7 @@ struct PE_T_M{
   build(){
     //根组件
     Flex({direction:FlexDirection.Column}){
+
       //置顶栏
       Row() {
         //最上角叉子组件
@@ -56,6 +57,7 @@ struct PE_T_M{
       .width('100%')
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
+
     }
     .width('100%')
     .height('100%')
