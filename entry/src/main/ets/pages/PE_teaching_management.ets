@@ -71,6 +71,19 @@ struct PE_T_M{
       Divider()
         .strokeWidth(3)
         .color(Color.Black)
+        .margin({bottom:5})
+
+      //下半区主内容根组件
+      List(){
+
+        //教学管理模块
+        ListItem(){
+
+        }
+        .width('100%')
+      }
+      .flexGrow(1)
+      .width('100%')
 
 
     }
