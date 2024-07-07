@@ -85,6 +85,9 @@ struct PE_T_M {
               .fontWeight(500)
               .flexGrow(1)
               .textAlign(TextAlign.Center)
+            Divider()
+              .strokeWidth(3)
+              .color(Color.Black)
           }
           .width('100%')
           .justifyContent(FlexAlign.Start)
@@ -92,9 +95,6 @@ struct PE_T_M {
           .justifyContent(FlexAlign.SpaceBetween)
           .margin({ bottom: 10 })
 
-          Divider()
-            .strokeWidth(3)
-            .color(Color.Black)
         }
         .width('100%')
         .backgroundColor('#9affffff')
