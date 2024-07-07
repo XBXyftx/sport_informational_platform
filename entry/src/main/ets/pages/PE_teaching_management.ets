@@ -3,6 +3,7 @@ import router from '@ohos.router'
 interface PE_MoKuai {
   img: Resource
   str: string
+  // url:string
 }
 
 //体育教学管理详情页
