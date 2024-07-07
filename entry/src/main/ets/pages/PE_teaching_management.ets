@@ -71,6 +71,7 @@ struct PE_T_M {
       Divider()
         .strokeWidth(3)
         .color(Color.Black)
+        .margin({bottom:10})
 
       //下半区主内容根组件
       List() {
