@@ -1,4 +1,4 @@
-//教研管理详情页
+//学生体质测试详情页
 @Entry
 @Component
 struct TZCS {
