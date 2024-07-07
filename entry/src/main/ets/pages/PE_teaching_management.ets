@@ -11,6 +11,9 @@ interface PE_MoKuai {
 struct PE_T_M {
   @State PE_MK: PE_MoKuai[] = [
     { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
+    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
+    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
+    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
   ]
 
   build() {
@@ -85,30 +88,33 @@ struct PE_T_M {
       //下半区主内容根组件
       List() {
 
-        //教学管理模块
-        ListItem() {
-          Row() {
-            Image($rawfile('jiaoShiGuanLi.svg'))
-              .height(50)
-            Text('教师管理')
-              .fontSize(30)
-              .fontWeight(500)
-              .flexGrow(1)
-              .textAlign(TextAlign.Center)
+        ForEach(this.PE_MK,(item:PE_MoKuai,index:number)=>{
+          //教学管理模块
+          ListItem() {
+            Row() {
+              Image(item.img)
+                .height(50)
+              Text(item.str)
+                .fontSize(30)
+                .fontWeight(500)
+                .flexGrow(1)
+                .textAlign(TextAlign.Center)
 
+            }
+            .width('100%')
+            .justifyContent(FlexAlign.Start)
+            .padding({ left: 20, right: 0, top: 10, bottom: 10 })
+            .justifyContent(FlexAlign.SpaceBetween)
+            .margin({ bottom: 10 })
+            .width(360)
+            .backgroundColor('#9affffff')
+            .border({ color: Color.Black, width: 2 })
+            .borderRadius(30)
           }
           .width('100%')
-          .justifyContent(FlexAlign.Start)
-          .padding({ left: 20, right: 0, top: 10, bottom: 10 })
-          .justifyContent(FlexAlign.SpaceBetween)
-          .margin({ bottom: 10 })
-          .width(360)
-          .backgroundColor('#9affffff')
-          .border({ color: Color.Black, width: 2 })
-          .borderRadius(30)
-        }
-        .width('100%')
-        .margin({ top: 10, bottom: 10 })
+          .margin({ top: 10, bottom: 10 })
+        })
+
 
       }
       .flexGrow(1)
