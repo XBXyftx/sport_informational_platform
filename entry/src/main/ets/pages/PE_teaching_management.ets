@@ -11,8 +11,8 @@ interface PE_MoKuai {
 struct PE_T_M {
   @State PE_MK: PE_MoKuai[] = [
     { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
-    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教研管理' },
-    { img: $rawfile('jiaoShiGuanLi.svg'), str: '体育课程开设' },
+    { img: $rawfile('jiaoYan.svg'), str: '教研管理' },
+    { img: $rawfile('tiYu.svg'), str: '体育课程开设' },
     { img: $rawfile('jiaoShiGuanLi.svg'), str: '体育成绩管理' },
     { img: $rawfile('jiaoShiGuanLi.svg'), str: '教学资源' },
   ]
