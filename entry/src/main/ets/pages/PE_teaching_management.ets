@@ -10,7 +10,7 @@ interface PE_MoKuai {
 @Component
 struct PE_T_M {
   @State PE_MK: PE_MoKuai[] = [
-    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' }
+    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
   ]
 
   build() {
