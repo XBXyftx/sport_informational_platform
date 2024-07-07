@@ -3,10 +3,10 @@ import router from '@ohos.router'
 //体育教学管理详情页
 @Entry
 @Component
-struct PE_T_M{
-  build(){
+struct PE_T_M {
+  build() {
     //根组件
-    Flex({direction:FlexDirection.Column}){
+    Flex({ direction: FlexDirection.Column }) {
 
       //置顶栏
       Row() {
@@ -59,39 +59,48 @@ struct PE_T_M{
       .justifyContent(FlexAlign.SpaceBetween)
 
       //标题
-      Row(){
+      Row() {
         Text('体育教学管理')
-          .fontSize(30)
-          .fontWeight(700)
+          .fontSize(40)
+          .fontWeight(800)
       }
       .width('100%')
       .justifyContent(FlexAlign.Center)
-      .margin({top:10,bottom:10})
+      .margin({ top: 10, bottom: 10 })
 
       Divider()
         .strokeWidth(3)
         .color(Color.Black)
-        .margin({bottom:5})
 
       //下半区主内容根组件
-      List(){
+      List() {
 
         //教学管理模块
-        ListItem(){
-          Row(){
+        ListItem() {
+          Row() {
             Image($rawfile('jiaoShiGuanLi.svg'))
               .height(50)
+            Text('教师管理')
+              .fontSize(30)
+              .fontWeight(500)
+              .flexGrow(1)
+              .textAlign(TextAlign.Center)
           }
           .width('100%')
           .justifyContent(FlexAlign.Start)
-          .padding({left:5,right:5,top:10,bottom:10})
+          .padding({ left: 20, right: 0, top: 10, bottom: 10 })
+          .justifyContent(FlexAlign.SpaceBetween)
+          .margin({ bottom: 10 })
+
+          Divider()
+            .strokeWidth(3)
+            .color(Color.Black)
         }
         .width('100%')
         .backgroundColor('#9affffff')
       }
       .flexGrow(1)
       .width('100%')
-
 
     }
     .width('100%')
