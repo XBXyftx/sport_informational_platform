@@ -85,19 +85,21 @@ struct PE_T_M {
               .fontWeight(500)
               .flexGrow(1)
               .textAlign(TextAlign.Center)
-            Divider()
-              .strokeWidth(3)
-              .color(Color.Black)
+
           }
           .width('100%')
           .justifyContent(FlexAlign.Start)
           .padding({ left: 20, right: 0, top: 10, bottom: 10 })
           .justifyContent(FlexAlign.SpaceBetween)
           .margin({ bottom: 10 })
-
+          .width(360)
+          .backgroundColor('#9affffff')
+          .border({color:Color.Black,width:2})
+          .borderRadius(30)
         }
         .width('100%')
-        .backgroundColor('#9affffff')
+        .margin({top:10,bottom:10})
+
       }
       .flexGrow(1)
       .width('100%')
