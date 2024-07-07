@@ -84,7 +84,7 @@ struct PE_T_M {
       Divider()
         .strokeWidth(3)
         .color(Color.Black)
-        .margin({ bottom: 10 })
+        .margin({ bottom: 30 })
 
       //下半区主内容根组件
       List() {
@@ -120,6 +120,7 @@ struct PE_T_M {
       }
       .flexGrow(1)
       .width('100%')
+      .backgroundColor(Color.White)
 
     }
     .width('100%')
