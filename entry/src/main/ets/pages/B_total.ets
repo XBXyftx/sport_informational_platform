@@ -115,7 +115,7 @@ struct total {
     { text: '群体活动管理', size: 26, url: "" },
     { text: '体育志愿者管理', size: 24, url: "" },
     { text: '运动训练管理', size: 26, url: "" },
-    { text: '教改科研管理', size: 26, url: "" },
+    { text: '教改科研管理', size: 26, url: "pages/C_jiaoYan" },
     { text: '运动场馆管理', size: 26, url: "" },
     { text: '第二课堂系统', size: 26, url: "" },
   ]
