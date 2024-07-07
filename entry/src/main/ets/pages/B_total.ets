@@ -110,7 +110,7 @@ struct total {
   ]
   @State
   MoKuai: shouYeMoKuai[] = [
-    { text: '体育教学管理', size: 26, url: "pages/PE_teaching_management" },
+    { text: '体育教学管理', size: 26, url: "pages/C_PE_teaching_management" },
     { text: '学生体质测试', size: 26, url: "" },
     { text: '群体活动管理', size: 26, url: "" },
     { text: '体育志愿者管理', size: 24, url: "" },
