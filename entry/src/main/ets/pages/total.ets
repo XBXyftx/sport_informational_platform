@@ -12,6 +12,7 @@ interface dill {
 interface shouYeMoKuai {
   text: string
   size: number
+  url: string
 }
 
 interface baoXiuZhongLei {
@@ -185,12 +186,12 @@ struct total {
       img: $rawfile('diaoYan.svg'),
       details: '完成调研问卷，及时反馈问题'
     },
-    // {
-    //   title: '我的课表',
-    //   etitle: 'class schedule',
-    //   img: $rawfile('keBiao.svg'),
-    //   details: '明天暂时没有课程哦好好休息吧'
-    // },
+  // {
+  //   title: '我的课表',
+  //   etitle: 'class schedule',
+  //   img: $rawfile('keBiao.svg'),
+  //   details: '明天暂时没有课程哦好好休息吧'
+  // },
   ]
 
   @Builder
@@ -277,7 +278,7 @@ struct total {
         //首页
         TabContent() {
           //首页tabContent根组件
-          Flex({direction:FlexDirection.Column}) {
+          Flex({ direction: FlexDirection.Column }) {
 
             Image($rawfile('Total_Sport_Picture.png'))
               .width('100%')
@@ -317,6 +318,9 @@ struct total {
                   })
                 }
                 .margin({ bottom: 10, top: 10 })
+                .onClick(() => {
+                  router.pushUrl({ url: })
+                })
 
               })
 
@@ -330,7 +334,7 @@ struct total {
           }
           .width('100%')
           .height('100%')
-          .padding({bottom:5})
+          .padding({ bottom: 5 })
           .linearGradient({
             direction: GradientDirection.RightBottom,
             colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
@@ -569,7 +573,7 @@ struct total {
                 ListItem() {
 
                   //模块最外层组件
-                  Row({space:10}) {
+                  Row({ space: 10 }) {
                     //左侧列表名
                     Column({ space: 10 }) {
                       Text(item.title)
@@ -592,7 +596,7 @@ struct total {
                       .width(160)
                       .opacity(0.8)
                       .maxLines(3)
-                      .textOverflow({overflow:TextOverflow.Ellipsis})
+                      .textOverflow({ overflow: TextOverflow.Ellipsis })
 
                     //右箭头
                     Image($rawfile('youJianTou.svg'))
