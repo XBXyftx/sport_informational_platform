@@ -110,14 +110,14 @@ struct total {
   ]
   @State
   MoKuai: shouYeMoKuai[] = [
-    { text: '体育教学管理', size: 26 },
-    { text: '学生体质测试', size: 26 },
-    { text: '群体活动管理', size: 26 },
-    { text: '体育志愿者管理', size: 24 },
-    { text: '运动训练管理', size: 26 },
-    { text: '教改科研管理', size: 26 },
-    { text: '运动场馆管理', size: 26 },
-    { text: '第二课堂系统', size: 26 },
+    { text: '体育教学管理', size: 26, url: "pages/PE_teaching_management" },
+    { text: '学生体质测试', size: 26, url: "" },
+    { text: '群体活动管理', size: 26, url: "" },
+    { text: '体育志愿者管理', size: 24, url: "" },
+    { text: '运动训练管理', size: 26, url: "" },
+    { text: '教改科研管理', size: 26, url: "" },
+    { text: '运动场馆管理', size: 26, url: "" },
+    { text: '第二课堂系统', size: 26, url: "" },
   ]
   @State baoXiuMK1: baoXiuMoKuai[] = [
     { text: '我的报修', img: $rawfile('myBaoXiu.svg'), color: '' },
@@ -319,7 +319,7 @@ struct total {
                 }
                 .margin({ bottom: 10, top: 10 })
                 .onClick(() => {
-                  router.pushUrl({ url: })
+                  router.pushUrl({ url: item.url})
                 })
 
               })
