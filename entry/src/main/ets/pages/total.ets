@@ -319,7 +319,7 @@ struct total {
                 }
                 .margin({ bottom: 10, top: 10 })
                 .onClick(() => {
-                  router.pushUrl({ url: item.url})
+                  router.pushUrl({ url: item.url })
                 })
 
               })
