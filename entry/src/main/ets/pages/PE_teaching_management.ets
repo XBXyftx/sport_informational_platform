@@ -1,9 +1,18 @@
 import router from '@ohos.router'
 
+interface PE_MoKuai {
+  img: Resource
+  str: string
+}
+
 //体育教学管理详情页
 @Entry
 @Component
 struct PE_T_M {
+  @State PE_MK: PE_MoKuai[] = [
+    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' }
+  ]
+
   build() {
     //根组件
     Flex({ direction: FlexDirection.Column }) {
@@ -71,7 +80,7 @@ struct PE_T_M {
       Divider()
         .strokeWidth(3)
         .color(Color.Black)
-        .margin({bottom:10})
+        .margin({ bottom: 10 })
 
       //下半区主内容根组件
       List() {
@@ -95,11 +104,11 @@ struct PE_T_M {
           .margin({ bottom: 10 })
           .width(360)
           .backgroundColor('#9affffff')
-          .border({color:Color.Black,width:2})
+          .border({ color: Color.Black, width: 2 })
           .borderRadius(30)
         }
         .width('100%')
-        .margin({top:10,bottom:10})
+        .margin({ top: 10, bottom: 10 })
 
       }
       .flexGrow(1)
