@@ -1,7 +1,7 @@
 {
   "src": [
-    "pages/Index",
-    "pages/total",
-    "pages/PE_teaching_management"
+    "pages/A_Index",
+    "pages/B_total",
+    "pages/C_PE_teaching_management"
   ]
 }
