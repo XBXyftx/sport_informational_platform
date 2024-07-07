@@ -124,6 +124,8 @@ struct PE_T_M {
             .fontSize(25)
             .width('100%')
             .textAlign(TextAlign.Center)
+            .fontWeight(500)
+            .margin({top:20})
         }
       }
       .flexGrow(1)
