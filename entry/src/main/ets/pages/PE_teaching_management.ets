@@ -89,7 +89,7 @@ struct PE_T_M {
       //下半区主内容根组件
       List() {
 
-        ForEach(this.PE_MK,(item:PE_MoKuai,index:number)=>{
+        ForEach(this.PE_MK, (item: PE_MoKuai, index: number) => {
           //教学管理模块
           ListItem() {
             Row() {
@@ -111,21 +111,25 @@ struct PE_T_M {
             .backgroundColor('#9affffff')
             .border({ color: Color.Black, width: 2 })
             .borderRadius(30)
+            .opacity(1)
+            .stateStyles({
+              pressed: {
+                .opacity(0.6)
+              }
+            })
           }
           .width('100%')
           .margin({ top: 10, bottom: 10 })
 
-
-
         })
 
-        ListItem(){
+        ListItem() {
           Text('- 智慧运动 - 健康随行 -')
             .fontSize(25)
             .width('100%')
             .textAlign(TextAlign.Center)
             .fontWeight(500)
-            .margin({top:20})
+            .margin({ top: 20 })
         }
       }
       .flexGrow(1)
