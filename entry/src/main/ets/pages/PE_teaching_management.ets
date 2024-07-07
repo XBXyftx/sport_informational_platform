@@ -13,8 +13,8 @@ struct PE_T_M {
     { img: $rawfile('jiaoShiGuanLi.svg'), str: '教师管理' },
     { img: $rawfile('jiaoYan.svg'), str: '教研管理' },
     { img: $rawfile('tiYu.svg'), str: '体育课程开设' },
-    { img: $rawfile('jiaoShiGuanLi.svg'), str: '体育成绩管理' },
-    { img: $rawfile('jiaoShiGuanLi.svg'), str: '教学资源' },
+    { img: $rawfile('PEchengJi.svg'), str: '体育成绩管理' },
+    { img: $rawfile('ziYuan.svg'), str: '教学资源' },
   ]
 
   build() {
