@@ -114,9 +114,17 @@ struct PE_T_M {
           }
           .width('100%')
           .margin({ top: 10, bottom: 10 })
+
+
+
         })
 
-
+        ListItem(){
+          Text('- 智慧运动 - 健康随行 -')
+            .fontSize(25)
+            .width('100%')
+            .textAlign(TextAlign.Center)
+        }
       }
       .flexGrow(1)
       .width('100%')
