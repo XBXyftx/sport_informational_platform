@@ -120,7 +120,6 @@ struct PE_T_M {
       }
       .flexGrow(1)
       .width('100%')
-      .backgroundColor(Color.White)
 
     }
     .width('100%')
