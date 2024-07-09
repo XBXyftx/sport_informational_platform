@@ -1,6 +1,7 @@
 //学生体质测试详情页
 import router from '@ohos.router'
 
+
 @Entry
 @Component
 struct TZCS {
