@@ -1,5 +1,7 @@
 import router from '@ohos.router'
 
+// 总集页
+
 interface dill {
   type: string
   number: string
