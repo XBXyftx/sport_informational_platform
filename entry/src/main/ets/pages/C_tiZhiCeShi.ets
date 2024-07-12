@@ -5,7 +5,7 @@ import router from '@ohos.router'
 @Component
 struct TZCS {
   build() {
-    Flex({direction:FlexDirection.Column}){
+    Flex({ direction: FlexDirection.Column }) {
       //置顶栏
       Row() {
         //最上角叉子组件
@@ -62,16 +62,18 @@ struct TZCS {
           .fontSize(40)
           .fontWeight(800)
 
-        //下半区主内容根组件
-        List() {
 
-        }
-        .flexGrow(1)
-        .width('100%')
       }
       .width('100%')
       .justifyContent(FlexAlign.Center)
       .margin({ top: 10, bottom: 10 })
+
+      //下半区主内容根组件
+      List() {
+
+      }
+      .flexGrow(1)
+      .width('100%')
     }
     .width('100%')
     .height('100%')
