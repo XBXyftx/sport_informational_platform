@@ -59,6 +59,7 @@ struct TZCS {
       //下半区最外层组件
       Column(){
 
+        Text('学生体质测试')
       }
       .width('100%')
       .flexGrow(1)
