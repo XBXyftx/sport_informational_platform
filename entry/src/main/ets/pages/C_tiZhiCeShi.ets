@@ -55,6 +55,13 @@ struct TZCS {
       .width('100%')
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
+
+      //下半区最外层组件
+      Column(){
+
+      }
+      .width('100%')
+      .flexGrow(1)
     }
     .width('100%')
     .height('100%')
