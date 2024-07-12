@@ -6,7 +6,6 @@ import router from '@ohos.router'
 struct TZCS {
   build() {
     Flex({direction:FlexDirection.Column}){
-
       //置顶栏
       Row() {
         //最上角叉子组件
