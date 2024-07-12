@@ -56,13 +56,15 @@ struct TZCS {
       .backgroundColor(Color.Black)
       .justifyContent(FlexAlign.SpaceBetween)
 
-      //下半区最外层组件
-      Column(){
-
-        Text('学生体质测试')
+      //标题
+      Row() {
+        Text('体育教学管理')
+          .fontSize(40)
+          .fontWeight(800)
       }
       .width('100%')
-      .flexGrow(1)
+      .justifyContent(FlexAlign.Center)
+      .margin({ top: 10, bottom: 10 })
     }
     .width('100%')
     .height('100%')
