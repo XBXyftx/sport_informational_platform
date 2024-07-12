@@ -61,6 +61,13 @@ struct TZCS {
         Text('学生体质测试')
           .fontSize(40)
           .fontWeight(800)
+
+        //下半区主内容根组件
+        List() {
+
+        }
+        .flexGrow(1)
+        .width('100%')
       }
       .width('100%')
       .justifyContent(FlexAlign.Center)
