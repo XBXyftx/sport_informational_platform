@@ -58,7 +58,7 @@ struct TZCS {
 
       //标题
       Row() {
-        Text('体育教学管理')
+        Text('学生体质测试')
           .fontSize(40)
           .fontWeight(800)
       }
