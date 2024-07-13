@@ -1,9 +1,15 @@
 //学生体质测试详情页
 import router from '@ohos.router'
 
+interface tiZhiAnNiu{
+  text:string
+  url:string
+}
 @Entry
 @Component
 struct TZCS {
+
+
   build() {
     Flex({ direction: FlexDirection.Column }) {
       //置顶栏
@@ -67,14 +73,18 @@ struct TZCS {
       .margin({ top: 10, bottom: 10 })
 
       //下半区主内容根组件
-      Column() {
+      Column({space:10}) {
         Row() {
           Text('测试预约')
             .fontSize(28)
+            .fontWeight(600)
         }
         .padding(20)
         .borderRadius(100)
-        .backgroundColor(Color.White)
+        .linearGradient({
+          direction: GradientDirection.RightBottom,
+          colors: [['#fcffffff', 0], ['#a5b2b2b2', 1]]
+        })
         .justifyContent(FlexAlign.Center)
       }
       .flexGrow(1)
