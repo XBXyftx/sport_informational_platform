@@ -81,6 +81,7 @@ struct TZCS {
       Column({space:35}) {
 
         Image($rawfile('tiZhi.svg'))
+          .width(200)
 
         ForEach(this.tZAN,(item:tiZhiAnNiu,index:number)=>{
           Row() {
@@ -107,7 +108,7 @@ struct TZCS {
       .flexGrow(1)
       .width('100%')
       .alignItems(HorizontalAlign.Center)
-      .margin({ top: 300 })
+      .margin({ top: 60 })
     }
     .width('100%')
     .height('100%')
