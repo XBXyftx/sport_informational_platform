@@ -68,12 +68,11 @@ struct TZCS {
 
       //下半区主内容根组件
       Column() {
-        Row(){
+        Row() {
           Text('测试预约')
-            .fontSize(25)
+            .fontSize(28)
         }
-        .width(140)
-        .height(40)
+        .padding(20)
         .borderRadius(20)
         .backgroundColor(Color.White)
         .justifyContent(FlexAlign.Center)
@@ -81,6 +80,7 @@ struct TZCS {
       .flexGrow(1)
       .width('100%')
       .alignItems(HorizontalAlign.Center)
+      .margin({ top: 300 })
     }
     .width('100%')
     .height('100%')
