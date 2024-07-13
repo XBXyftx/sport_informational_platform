@@ -79,6 +79,10 @@ struct TZCS {
 
       //下半区主内容根组件
       Column({space:10}) {
+
+        ForEach(this.tZAN,(item:tiZhiAnNiu,index:number)=>{
+
+        })
         Row() {
           Text('测试预约')
             .fontSize(28)
