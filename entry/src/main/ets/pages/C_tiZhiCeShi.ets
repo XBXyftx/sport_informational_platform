@@ -8,7 +8,12 @@ interface tiZhiAnNiu{
 @Entry
 @Component
 struct TZCS {
-
+  @State tZAN : tiZhiAnNiu[]=[
+    {text:'测试预约',url:''},
+    {text:'测试预约',url:''},
+    {text:'测试预约',url:''},
+    {text:'测试预约',url:''},
+  ]
 
   build() {
     Flex({ direction: FlexDirection.Column }) {
