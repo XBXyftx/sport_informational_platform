@@ -78,23 +78,23 @@ struct TZCS {
       .margin({ top: 10, bottom: 10 })
 
       //下半区主内容根组件
-      Column({space:10}) {
+      Column({space:15}) {
 
         ForEach(this.tZAN,(item:tiZhiAnNiu,index:number)=>{
+          Row() {
+            Text('测试预约')
+              .fontSize(28)
+              .fontWeight(600)
+          }
+          .padding(20)
+          .borderRadius(100)
+          .linearGradient({
+            direction: GradientDirection.RightBottom,
+            colors: [['#fcffffff', 0], ['#a5b2b2b2', 1]]
+          })
+          .justifyContent(FlexAlign.Center)
+        })
 
-        })
-        Row() {
-          Text('测试预约')
-            .fontSize(28)
-            .fontWeight(600)
-        }
-        .padding(20)
-        .borderRadius(100)
-        .linearGradient({
-          direction: GradientDirection.RightBottom,
-          colors: [['#fcffffff', 0], ['#a5b2b2b2', 1]]
-        })
-        .justifyContent(FlexAlign.Center)
       }
       .flexGrow(1)
       .width('100%')
