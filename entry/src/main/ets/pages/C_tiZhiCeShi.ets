@@ -93,6 +93,12 @@ struct TZCS {
             colors: [['#fcffffff', 0], ['#a5b2b2b2', 1]]
           })
           .justifyContent(FlexAlign.Center)
+          .shadow({radius:0})
+          .stateStyles({
+            pressed:{
+              .shadow({radius:20})
+            }
+          })
         })
 
       }
