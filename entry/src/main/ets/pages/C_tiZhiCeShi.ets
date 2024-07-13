@@ -68,7 +68,11 @@ struct TZCS {
 
       //下半区主内容根组件
       Column() {
-
+        Row(){
+          Text('测试预约')
+        }
+        .width(100)
+        .height(40)
       }
       .flexGrow(1)
       .width('100%')
