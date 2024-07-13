@@ -70,12 +70,15 @@ struct TZCS {
       Column() {
         Row(){
           Text('测试预约')
+
         }
         .width(100)
         .height(40)
+        .justifyContent(FlexAlign.Center)
       }
       .flexGrow(1)
       .width('100%')
+      .alignItems(HorizontalAlign.Center)
     }
     .width('100%')
     .height('100%')
