@@ -67,7 +67,7 @@ struct TZCS {
       .margin({ top: 10, bottom: 10 })
 
       //下半区主内容根组件
-      List() {
+      Column() {
 
       }
       .flexGrow(1)
