@@ -10,8 +10,8 @@ interface tiZhiAnNiu{
 struct TZCS {
   @State tZAN : tiZhiAnNiu[]=[
     {text:'测试预约',url:''},
-    {text:'测试预约',url:''},
-    {text:'测试预约',url:''},
+    {text:'缓考申请',url:''},
+    {text:'成绩查询',url:''},
     {text:'测试预约',url:''},
   ]
 
@@ -78,11 +78,11 @@ struct TZCS {
       .margin({ top: 10, bottom: 10 })
 
       //下半区主内容根组件
-      Column({space:15}) {
+      Column({space:35}) {
 
         ForEach(this.tZAN,(item:tiZhiAnNiu,index:number)=>{
           Row() {
-            Text('测试预约')
+            Text(item.text)
               .fontSize(28)
               .fontWeight(600)
           }
