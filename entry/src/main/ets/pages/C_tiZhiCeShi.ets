@@ -70,10 +70,12 @@ struct TZCS {
       Column() {
         Row(){
           Text('测试预约')
-
+            .fontSize(25)
         }
-        .width(100)
+        .width(140)
         .height(40)
+        .borderRadius(20)
+        .backgroundColor(Color.White)
         .justifyContent(FlexAlign.Center)
       }
       .flexGrow(1)
