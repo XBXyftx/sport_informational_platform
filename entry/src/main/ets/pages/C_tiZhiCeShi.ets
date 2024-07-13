@@ -73,7 +73,7 @@ struct TZCS {
             .fontSize(28)
         }
         .padding(20)
-        .borderRadius(20)
+        .borderRadius(100)
         .backgroundColor(Color.White)
         .justifyContent(FlexAlign.Center)
       }
