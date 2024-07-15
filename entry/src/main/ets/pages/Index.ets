@@ -160,7 +160,7 @@ struct Index {
           })
           .onClick(()=>{
             router.pushUrl({
-              url:"pages/total"
+              url:"pages/B_total"
             })
           })
       }
