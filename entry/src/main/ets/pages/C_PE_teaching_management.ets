@@ -91,7 +91,7 @@ struct PE_T_M {
             .margin({ top: 20 })
         }
       }
-      .flexGrow(1)
+      .layoutWeight(1)
       .width('100%')
 
     }
