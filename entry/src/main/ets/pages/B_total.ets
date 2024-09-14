@@ -217,12 +217,12 @@ struct total {
       //分割线透明度根据是否被选择判别器currentIndex来决定
     }.width('100%')
     .backgroundColor('#ffd7e9fc')
-    .height(70)
+    .expandSafeArea()
   }
 
   build() {
     //根组件
-    Column(){
+    Column() {
 
       zhiDingLan()
 
@@ -231,7 +231,7 @@ struct total {
         //首页
         TabContent() {
           //首页tabContent根组件
-          Flex({ direction: FlexDirection.Column }) {
+          Column() {
 
             Image($rawfile('Total_Sport_Picture.png'))
               .width('100%')
@@ -270,7 +270,7 @@ struct total {
                     }
                   })
                 }
-                .margin({ bottom: 10, top: 10 })
+                .margin({ left: 10, top: 10 })
                 .onClick(() => {
                   router.pushUrl({ url: item.url })
                 })
@@ -281,18 +281,18 @@ struct total {
             }
             .width('100%')
             // .scrollable(ScrollDirection.Vertical)
-            .padding({ top: 20, left: 10, bottom: 10, right: 10 })
+            .padding({ top: 5})
             .lanes(2)
-            .height('495.00vp')
+            .layoutWeight(1)
           }
-          .width('100%')
-          .height('100%')
+          .layoutWeight(1)
           .padding({ bottom: 5 })
           .linearGradient({
             direction: GradientDirection.RightBottom,
             colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
           })
-        }.tabBar(this.TabBuilder(0, $rawfile('Firstpage.svg'), '首页'))
+        }
+        .height('100%').tabBar(this.TabBuilder(0, $rawfile('Firstpage.svg'), '首页'))
 
         //订单
         TabContent() {
@@ -362,12 +362,12 @@ struct total {
 
           }
           .width('100%')
-          .height('100%')
+          .layoutWeight(1)
           .linearGradient({
             direction: GradientDirection.RightBottom,
             colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
           })
-        }.tabBar(this.TabBuilder(1, $rawfile('Order.svg'), '订单'))
+        }.height('100%').tabBar(this.TabBuilder(1, $rawfile('Order.svg'), '订单'))
 
         //报修
         TabContent() {
@@ -449,17 +449,17 @@ struct total {
             .margin({ bottom: 70 })
           }
           .width('100%')
-          .height('100%')
+          .layoutWeight(1)
           .linearGradient({
             direction: GradientDirection.RightBottom,
             colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
           })
-        }.tabBar(this.TabBuilder(2, $rawfile('repairs.svg'), '报修'))
+        }.height('100%').tabBar(this.TabBuilder(2, $rawfile('repairs.svg'), '报修'))
 
         //我的
         TabContent() {
           //我的页根组件
-          Flex({ direction: FlexDirection.Column }) {
+          Column() {
             //上半区固定栏
             Column() {
 
@@ -505,7 +505,7 @@ struct total {
               direction: GradientDirection.LeftBottom,
               colors: [['#c4c20df7', 0], ['#f300fffc', 1]]
             })
-            .flexBasis(320)
+            // .flexBasis(320)
 
             //下半区功能栏根组件
             List({ space: 20 }) {
@@ -557,7 +557,12 @@ struct total {
                       .alignSelf(ItemAlign.Center)
                   }
                   .width('100%')
-                  .padding({ left: 5, right: 5, top: 15, bottom: 15 })
+                  .padding({
+                    left: 5,
+                    right: 5,
+                    top: 15,
+                    bottom: 15
+                  })
                   .justifyContent(FlexAlign.Start)
                   .alignItems(VerticalAlign.Center)
 
@@ -575,16 +580,16 @@ struct total {
 
           }
           .width('100%')
-          .height('100%')
+          .layoutWeight(1)
           .linearGradient({
             direction: GradientDirection.RightBottom,
             colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
           })
-        }.tabBar(this.TabBuilder(3, $rawfile('My.svg'), '我的'))
+        }.height('100%').tabBar(this.TabBuilder(3, $rawfile('My.svg'), '我的'))
 
       }
       .width('100%')
-      // .flexGrow(1)
+      .layoutWeight(1)
       .vertical(false)
       .scrollable(true)
       .barWidth('100%')
@@ -595,6 +600,12 @@ struct total {
       })
 
     }
+    .fullSize()
+  }
+
+  @Styles
+  fullSize() {
+    //根组件
     .width('100%')
     .height('100%')
   }
