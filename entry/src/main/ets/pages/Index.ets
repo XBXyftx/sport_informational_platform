@@ -8,59 +8,15 @@ struct Index {
   @State verification_code : Number = 0
 
   build() {
+    //根组件
     Flex({direction:FlexDirection.Column}){
-      //根组件
-      Row(){
-        //置顶栏
-        Column(){
-          //最上角叉子组件
-          Image($rawfile('X.svg'))
-            .height(20)
-            .fillColor(Color.White)
-
-        }
-        .backgroundColor(Color.Black)
-        .stateStyles({
-          pressed:{
-            .backgroundColor(Color.Gray)
-          }
-        })
-        .height(30)
-        .width(30)
-        .margin({left:12,right:10})
-        .justifyContent(FlexAlign.Center)
+      //置顶栏
+      zhiDingLan()
 
 
-        Text('北京信息科技大学体育信息化平台')
-          .fontColor(Color.White)
-          .fontWeight(600)
-
-        Column(){
-          //右上角更多组件
-          Image($rawfile('more_sport.svg'))
-            .width(30)
-        }
-        .height(30)
-        .width(30)
-        .margin({right:10})
-        .justifyContent(FlexAlign.Center)
-        .backgroundColor(Color.Black)
-        .stateStyles({
-          pressed:{
-            .backgroundColor(Color.Gray)
-          }
-        })
-
-      }
-      .flexBasis(60)
-      .width('100%')
-      .backgroundColor(Color.Black)
-      .justifyContent(FlexAlign.SpaceBetween)
-
-
-
+      //下半区最外层组件
       Column(){
-        //下半区最外层组件
+
         Image($rawfile('bxk.jpg'))
           .width(100)
           .margin({top:80})
@@ -168,10 +124,62 @@ struct Index {
       .backgroundImage($rawfile('sign_in_background.jpg'))
       .backgroundImageSize(ImageSize.Cover)
       .flexGrow(1)
+      .expandSafeArea()
 
     }
     .width('100%')
     .height('100%')
 
   }
+}
+
+@Builder
+function zhiDingLan() {
+  //置顶栏
+  Row() {
+    //最上角叉子组件
+    Column() {
+
+      Image($rawfile('X.svg'))
+        .height(20)
+        .fillColor(Color.White);
+
+    }
+    .backgroundColor(Color.Black)
+    .stateStyles({
+      pressed: {
+        .backgroundColor(Color.Gray)
+      }
+    })
+    .height(30)
+    .width(30)
+    .margin({ left: 12, right: 10 })
+    .justifyContent(FlexAlign.Center);
+
+
+    Text('北京信息科技大学体育信息化平台')
+      .fontColor(Color.White)
+      .fontWeight(600);
+
+    Column() {
+      //右上角更多组件
+      Image($rawfile('more_sport.svg'))
+        .width(30);
+    }
+    .height(30)
+    .width(30)
+    .margin({ right: 10 })
+    .justifyContent(FlexAlign.Center)
+    .backgroundColor(Color.Black)
+    .stateStyles({
+      pressed: {
+        .backgroundColor(Color.Gray)
+      }
+    });
+
+  }
+  .flexBasis(60)
+  .width('100%')
+  .backgroundColor(Color.Black)
+  .justifyContent(FlexAlign.SpaceBetween)
 }
