@@ -247,7 +247,7 @@ struct total {
                       .fontWeight(600)
                       .fontColor(Color.White)
                   }
-                  .width(160)
+                  .width('90%')
                   .height(90)
                   .borderRadius(20)
                   .justifyContent(FlexAlign.Center)
