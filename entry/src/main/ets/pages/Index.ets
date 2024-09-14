@@ -183,3 +183,4 @@ function zhiDingLan() {
   .backgroundColor(Color.Black)
   .justifyContent(FlexAlign.SpaceBetween)
 }
+export {zhiDingLan}

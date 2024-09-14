@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import { zhiDingLan } from './Index'
 
 interface PE_MoKuai {
   img: Resource
@@ -22,55 +23,7 @@ struct PE_T_M {
     //根组件
     Flex({ direction: FlexDirection.Column }) {
 
-      //置顶栏
-      Row() {
-        //最上角叉子组件
-        Column() {
-          Image($rawfile('X.svg'))
-            .height(20)
-            .fillColor(Color.White)
-            .onClick(() => {
-              router.back()
-            })
-
-        }
-        .backgroundColor(Color.Black)
-        .stateStyles({
-          pressed: {
-            .backgroundColor(Color.Gray)
-          }
-        })
-        .height(30)
-        .width(30)
-        .margin({ left: 12, right: 10 })
-        .justifyContent(FlexAlign.Center)
-
-
-        Text('北京信息科技大学体育信息化平台')
-          .fontColor(Color.White)
-          .fontWeight(600)
-
-        //右上角更多组件
-        Column() {
-          Image($rawfile('more_sport.svg'))
-            .width(30)
-        }
-        .height(30)
-        .width(30)
-        .margin({ right: 10 })
-        .justifyContent(FlexAlign.Center)
-        .backgroundColor(Color.Black)
-        .stateStyles({
-          pressed: {
-            .backgroundColor(Color.Gray)
-          }
-        })
-
-      }
-      .flexBasis(60)
-      .width('100%')
-      .backgroundColor(Color.Black)
-      .justifyContent(FlexAlign.SpaceBetween)
+      zhiDingLan()
 
       //标题
       Row() {
@@ -105,7 +58,12 @@ struct PE_T_M {
             }
             .width('100%')
             .justifyContent(FlexAlign.Start)
-            .padding({ left: 20, right: 0, top: 10, bottom: 10 })
+            .padding({
+              left: 20,
+              right: 0,
+              top: 10,
+              bottom: 10
+            })
             .justifyContent(FlexAlign.SpaceBetween)
             .margin({ bottom: 10 })
             .width(360)
