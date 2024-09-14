@@ -153,7 +153,10 @@ function zhiDingLan() {
     .height(30)
     .width(30)
     .margin({ left: 12, right: 10 })
-    .justifyContent(FlexAlign.Center);
+    .justifyContent(FlexAlign.Center)
+    .onClick(()=>{
+      router.back()
+    })
 
 
     Text('北京信息科技大学体育信息化平台')
