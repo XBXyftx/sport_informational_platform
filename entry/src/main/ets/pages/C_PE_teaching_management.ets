@@ -1,6 +1,5 @@
 import router from '@ohos.router'
 import { zhiDingLan } from './Index'
-
 interface PE_MoKuai {
   img: Resource
   str: string

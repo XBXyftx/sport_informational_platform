@@ -281,16 +281,13 @@ struct total {
             }
             .width('100%')
             // .scrollable(ScrollDirection.Vertical)
-            .padding({ top: 5})
+            .padding({ top: 5 })
             .lanes(2)
             .layoutWeight(1)
           }
           .layoutWeight(1)
           .padding({ bottom: 5 })
-          .linearGradient({
-            direction: GradientDirection.RightBottom,
-            colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
-          })
+          .BGcolor()
         }
         .height('100%').tabBar(this.TabBuilder(0, $rawfile('Firstpage.svg'), '首页'))
 
@@ -609,4 +606,13 @@ struct total {
     .width('100%')
     .height('100%')
   }
+}
+
+@Styles
+function BGcolor() {
+  //首页tabContent根组件
+  .linearGradient({
+    direction: GradientDirection.RightBottom,
+    colors: [['#c498f4e8', 0], ['#f31c6bd7', 1]]
+  })
 }
