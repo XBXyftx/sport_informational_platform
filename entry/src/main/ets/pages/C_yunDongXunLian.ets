@@ -6,7 +6,7 @@ import { zhiDingLan } from './Index'
 @Component
 struct YDXLGL {
   build() {
-    Flex({ direction: FlexDirection.Column }) {
+    Column(){
       zhiDingLan()
     }
     .width('100%')

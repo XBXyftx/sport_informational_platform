@@ -5,7 +5,7 @@ import {zhiDingLan} from './Index'
 @Component
 struct jiaoYan {
   build() {
-    Flex({direction:FlexDirection.Column}){
+    Column(){
       zhiDingLan()
     }
     .width('100%')

@@ -21,7 +21,7 @@ struct PE_T_M {
 
   build() {
     //根组件
-    Flex({ direction: FlexDirection.Column }) {
+    Column(){
 
       zhiDingLan()
 

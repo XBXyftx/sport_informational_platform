@@ -222,7 +222,7 @@ struct total {
 
   build() {
     //根组件
-    Flex({ direction: FlexDirection.Column }) {
+    Column(){
 
       zhiDingLan()
 

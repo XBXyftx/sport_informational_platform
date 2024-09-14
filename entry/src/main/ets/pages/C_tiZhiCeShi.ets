@@ -17,7 +17,7 @@ struct TZCS {
   ]
 
   build() {
-    Flex({ direction: FlexDirection.Column }) {
+    Column(){
       zhiDingLan()
 
       //标题

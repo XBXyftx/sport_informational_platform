@@ -9,10 +9,9 @@ struct Index {
 
   build() {
     //根组件
-    Flex({direction:FlexDirection.Column}){
+    Column(){
       //置顶栏
       zhiDingLan()
-
 
       //下半区最外层组件
       Column(){
@@ -123,7 +122,7 @@ struct Index {
       .width('100%')
       .backgroundImage($rawfile('sign_in_background.jpg'))
       .backgroundImageSize(ImageSize.Cover)
-      .flexGrow(1)
+      .layoutWeight(1)
       .expandSafeArea()
 
     }
@@ -178,7 +177,7 @@ function zhiDingLan() {
     });
 
   }
-  .flexBasis(60)
+  .height(60)
   .width('100%')
   .backgroundColor(Color.Black)
   .justifyContent(FlexAlign.SpaceBetween)
